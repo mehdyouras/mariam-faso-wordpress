@@ -9,11 +9,12 @@
     color: white;
     text-decoration: none;
     @include inuit-rem(padding, 10px);
-    transition: 0.3s;
+    transition: 0.1s;
     &:hover {
         //border-color: #ffa162;
         &::before {
             color: #ffa162;
+            transform: translate(3px, 0);
         }
     }
     &::before {
@@ -21,6 +22,7 @@
         font-family: FontAwesome;
         content: "";
         margin-right: $inuit-global-spacing-unit-tiny;
+        display: inline-block;
     }
     &_dark {
         color: black;
