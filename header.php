@@ -9,7 +9,7 @@
     <title>Accueil - Mariam-Faso</title>
 </head>
 <body>
-<header class="header <?php if(!is_home()) :?>header_smal<?php endif; ?>">
+<header class="header <?php if(!is_home()) :?>header_small<?php endif; ?>">
     <div class="site-header">
         <h1 class="site-title"> <a class="site-title" href="index.html"><img class="site-title__logo" src="<?php mf_asset('img/logo.png'); ?>" alt"Logo de Mariam-Faso">Mariam-Faso</a></h1>
         <a class="hamburger-menu" href="#"></a>
