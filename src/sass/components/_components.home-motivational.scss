@@ -26,6 +26,14 @@
         margin-right: auto;
         margin-left: auto;
     }
+    @media screen and (min-width: 1600px) {
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+        position: absolute;
+        right: 5%;
+        bottom: 7%;
+    }
     &__title {
         color: white;
         display: flex;

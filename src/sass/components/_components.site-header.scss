@@ -43,5 +43,8 @@
             width: 100%;
             justify-content: space-between;
         }
+        @media screen and (min-width: 2000px) {
+            justify-content: center;
+        }
     }
 }
