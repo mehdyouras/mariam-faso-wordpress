@@ -1,0 +1,46 @@
+.cta {
+    @include inuit-font-size(14px);
+    font-family: $headings-font-stack;
+    font-weight: 600;
+    max-width: 97%;
+    text-transform: uppercase;
+    border: 1px solid white;
+    @include inuit-rem(border-radius, 3px);
+    color: white;
+    text-decoration: none;
+    @include inuit-rem(padding, 10px);
+    transition: 0.2s;
+    &:hover {
+        transform: scale(1.1);
+    }
+    &::before {
+        font-family: FontAwesome;
+        content: "";
+        @include inuit-rem(margin-right, 5px);
+    }
+    &_dark {
+        color: black;
+        border-color: black;
+    }
+    &_centered {
+        margin: auto;
+        max-width: 15.1em;
+    }
+    &_over-image {
+        background: rgba(0, 0, 0, 0.2);
+    }
+    &_no-border {
+        @include inuit-rem(margin-bottom, $inuit-global-spacing-unit);
+         @media screen and (min-width: 1270px) {
+             margin-bottom: 0;
+             border: 0;
+             &:nth-child(n+2) {
+                 border-left: 1px solid white;
+                 border-radius: 0;
+             }
+             &:hover {
+                 transform: scale(1);
+             }
+         }
+    }
+}

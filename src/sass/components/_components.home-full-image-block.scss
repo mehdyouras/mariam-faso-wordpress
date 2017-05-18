@@ -1,0 +1,9 @@
+.home-full-image-block {
+    //@include inuit-rem(height, 300px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

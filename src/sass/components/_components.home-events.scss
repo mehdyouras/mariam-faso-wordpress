@@ -1,0 +1,43 @@
+.home-events {
+    @media screen and (min-width: 768px) {
+        display: flex;
+    }
+    &__featured {
+        background: url("../img/featured-event-bcg.jpg");
+        height: 300px;
+        @media screen and (min-width: 768px) {
+            height: auto;
+            width: 50%;
+        }
+    }
+    &__nexts {
+        display: flex;
+        margin: 0;
+        flex-direction: column;
+        flex-wrap: wrap;
+        background: url("../img/list-events-bcg.png");
+        background-size: 180px;
+        @media screen and (min-width: 768px) {
+            width: 50%;
+        }
+        &-container {
+            padding: $inuit-global-spacing-unit-small;
+            transition: 0.2s;
+            background-image: url("../img/fa-arrow-right.svg");
+            background-repeat: no-repeat;
+            background-position: 110% 50%;
+            background-size: 5%;
+            transition: 0.2s;
+            &:hover {
+                background-position: 90% 50%;
+            }
+        }
+    }
+    &__cta-container {
+        background: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: $inuit-global-spacing-unit-small;
+    }
+}

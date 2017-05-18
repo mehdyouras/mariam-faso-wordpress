@@ -1,0 +1,44 @@
+.home-questions {
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        margin-top: -$inuit-global-spacing-unit;
+    }
+    &__item {
+        padding: $inuit-global-spacing-unit $inuit-global-spacing-unit-small;
+        @media screen and (min-width: 768px) {
+            width: 50%;
+            padding: 2*$inuit-global-spacing-unit $inuit-global-spacing-unit;
+        }
+         @media screen and (min-width: 1440px) {
+            display: flex;
+            justify-content: center;
+            padding: 3*$inuit-global-spacing-unit $inuit-global-spacing-unit-small;
+            &::after {
+                font-family: fontAwesome;
+                @include inuit-font-size(200px);
+                margin-left: 0.2em;
+            }
+        }
+        &_bcg-dark {
+            color: white;
+            background: url("../img/questions-dark-bcg.png");
+            background-size: 300px;
+            @media screen and (min-width: 1440px) {
+                &::after {
+                    content: "\f059";
+                }
+            }
+        }
+        &_bcg-light {
+            background: url("../img/questions-light-bcg.png");
+            background-size: 300px;
+            @media screen and (min-width: 1440px) {
+                &::after {
+                    content: "\f2b5";
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,63 @@
+.footer {
+    padding: $inuit-global-spacing-unit $inuit-global-spacing-unit-small;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    background: #868686;
+    border-top: 11px solid #a9a9a9;
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+    @media screen and (min-width: 2000px) {
+        justify-content: center;
+    }
+    &__item {
+        width: 80%;
+        max-width: 30em;
+        @media screen and (min-width: 768px) {
+            width: 45%;
+        }
+    }
+    &-partners {
+        &__item {
+            max-width: 16em;
+            &:nth-child(n+1) {
+                margin-top: $inuit-global-spacing-unit-small;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            @include inuit-rem(margin-bottom, $inuit-global-spacing-unit);
+        }
+    }
+    &-contact {
+        @media screen and (min-width: 2000px) {
+            margin-left: inuit-rem(90px);
+        }
+        &__contact-link {
+            color: white;
+            &::after {
+                font-family: FontAwesome;
+                content: "\f061";
+                @include inuit-rem(margin-left, $inuit-global-spacing-unit-tiny);
+            }
+        }
+        &__content-item {
+            display: block;
+            &_icon-phone::before {
+                font-family: FontAwesome;
+                content: "\f095";
+                @include inuit-rem(margin-right, $inuit-global-spacing-unit-tiny);
+                @include inuit-rem(margin-left, -20px);
+            }
+            &_icon-email::before {
+                font-family: FontAwesome;
+                content: "\f1fa";
+                @include inuit-rem(margin-right, $inuit-global-spacing-unit-tiny);
+                @include inuit-rem(margin-left, -20px);
+            }
+        }
+    }
+}
