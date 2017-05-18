@@ -67,6 +67,12 @@
                 <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, reprehenderit praesentium labore aperiam ab ut necessitatibus, quas, culpa eius blanditiis odit. Quae ipsum necessitatibus, iure modi recusandae omnis laudantium. Non.</p>
                 <a class="read-more">Lire plus</a>
             </article>
+            <article class="home-news__article">
+                <h4 class="article__title"><time class="article__time">12/09</time>Titre de la news</h4>
+                <img class="article__img" src="img/article1.jpg" alt="#">
+                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, reprehenderit praesentium labore aperiam ab ut necessitatibus, quas, culpa eius blanditiis odit. Quae ipsum necessitatibus, iure modi recusandae omnis laudantium. Non.</p>
+                <a class="read-more">Lire plus</a>
+            </article>
         </div>
     </section>
 <?php get_footer(); ?>
