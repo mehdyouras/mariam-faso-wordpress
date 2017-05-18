@@ -39,6 +39,9 @@
         &:nth-child(n+2):nth-child(-n+4) {
             border-left: 1px solid #f1f1f1;
         }
+        &:nth-last-child(2) {
+            background:#ffcba8;
+        }
         &.active::after {
             position: absolute;
             content: "";
@@ -160,6 +163,9 @@
         position: absolute;
         transition: 0.2s;
         width: 10em;
+        @media screen and (max-width: 1320px) {
+            margin-left: 0;
+        }
         &-item {
             &:nth-child(n+2) {
                 margin-top: $inuit-global-spacing-unit-small;
