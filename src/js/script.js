@@ -1,13 +1,15 @@
-const openNav = function() {
+const openNav = function(oEvent) {
+    oEvent.preventDefault();
     let $nav = document.querySelector(".site-nav");
     $nav.style.transform = "translatex(0)";
     document.addEventListener("click", function(oEvent) {
         if(oEvent.pageX > 250) {
-            closeNav();
+            closeNav(oEvent);
         }
     });
 }
-const closeNav = function() {
+const closeNav = function(oEvent) {
+    oEvent.preventDefault();
     document.querySelector(".site-nav").style.transform = "translatex(-250px)";
 }
 
@@ -18,6 +20,16 @@ const removeFocusDropdownMenu = function(oEvent) {
         oEvent.currentTarget.parentNode.parentNode.parentNode.classList.remove("accessible-access");
 }
 
+const navbarScroll = function() {
+    let $body = document.body,
+        $navbar = document.querySelector(".site-header");
+    if($body.scrollTop >= 28) {
+        $navbar.classList.add("site-header_fixed");
+    }
+    if($body.scrollTop < 28) {
+        $navbar.classList.remove("site-header_fixed");
+    }
+}
 
 const fPageIsLoaded = function() {
     document.querySelector(".hamburger-menu").addEventListener("click", openNav);
@@ -26,6 +38,7 @@ const fPageIsLoaded = function() {
         $link.addEventListener("focus", keepFocusDropdownMenu);
         $link.addEventListener("blur", removeFocusDropdownMenu);
     });
+    window.addEventListener("scroll", navbarScroll);
 }
 
 window.addEventListener("load", fPageIsLoaded);
