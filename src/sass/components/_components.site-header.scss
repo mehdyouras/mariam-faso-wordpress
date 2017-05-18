@@ -1,14 +1,20 @@
 .site-header {
     display: flex;
     align-items: center;
-    background: rgba(0, 0, 0, 0.5);
+    background: white;
+    width: 30%;
+    margin: auto;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     @include inuit-rem(padding-top, $inuit-global-spacing-unit*$inuit-global-spacing-unit-factor-small);
     @include inuit-rem(padding-bottom, $inuit-global-spacing-unit*$inuit-global-spacing-unit-factor-small);
     @include inuit-rem(margin-bottom, $inuit-global-spacing-unit);
-    @media screen and (min-width: 1270px) {
+    @media screen and (min-width: 1320px) {
         flex-direction: row-reverse;
         justify-content: space-between;
-        padding: inuit-rem($inuit-global-spacing-unit-small) inuit-rem($inuit-global-spacing-unit);
+        padding: 0;
+        width: 85%;
+
+
     }
     @media screen and (min-width: 2000px) {
         justify-content: center;

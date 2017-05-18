@@ -27,7 +27,8 @@
                     </ul>
                 </li>
                 <li class="site-nav__item"><a class="site-nav__link" href="#">À propos</a></li>
-                <li class="site-nav__item site-nav__item_cta-container"><a class="site-nav__link cta cta_dark cta_no-border" href="#">Faire un don</a><a class="site-nav__link cta cta_dark cta_no-border" href="#">Participer</a></li>
+                <a class="site-nav__item cta cta_dark cta_no-border" href="#">Faire un don</a>
+                <a class="site-nav__item cta cta_dark cta_no-border" href="#">Participer</a>
             </ul>
         </nav>
     </div>

@@ -12,7 +12,7 @@
     overflow: visible;
     @include inuit-rem(padding-top, 60px);
     transition: 0.3s;
-    @media screen and (min-width: 1270px) {
+    @media screen and (min-width: 1320px) {
         height: auto;
         width: auto;
         transform: translatex(0);
@@ -21,9 +21,9 @@
         padding-top: 0;
     }
     &__list {
-        @media screen and (min-width: 1270px) {
+        @media screen and (min-width: 1320px) {
             display: flex;
-            align-items: center;
+            //align-items: center;
             margin-bottom: 0;
         }
     }
@@ -31,10 +31,13 @@
         @include inuit-rem(padding-left, 32px);
         @include inuit-rem(margin-bottom, $inuit-global-spacing-unit);
         text-decoration: none;
-        color: #818181;
         display: block;
         transition: 0.3s;
         position: relative;
+        border-radius: 0;
+        &:nth-child(n+2):nth-child(-n+4) {
+            border-left: 1px solid #f1f1f1;
+        }
         &.active::after {
             position: absolute;
             content: "";
@@ -42,21 +45,23 @@
             border-bottom: 3px solid #ffa162;
             display: block;
         }
-        @media screen and (min-width: 1270px) {
-            @include inuit-rem(padding-left, 0px);
-            @include inuit-rem(margin-left, 32px);
+        @media screen and (min-width: 1320px) {
+            //padding: $inuit-global-spacing-unit-tiny $inuit-global-spacing-unit;
+            //@include inuit-rem(margin-left, 32px);
             display: inline-block;
-            color: white;
+            //color: white;
             margin-bottom: 0;
+            padding: $inuit-global-spacing-unit;
         }
         &_cta-container {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            @media screen and (min-width: 1270px) {
+            @media screen and (min-width: 1320px) {
                 display: inline-flex;
                 flex-direction: row;
-                border: 1px solid white;
+                border: 1px solid black;
+                //border-color: black;
                 border-radius: 3px;
                 padding: 0;
                 @include inuit-rem(margin-left, 32px);
@@ -66,9 +71,6 @@
     &__link {
         transition: 0.2s;
         //padding: 3px;
-        @media screen and (min-width: 1270px) {
-            color: white;
-        }
         &:hover {
             color:#ffa162;
         }
@@ -80,7 +82,7 @@
         @include inuit-rem(right, 25px);
         @include inuit-font-size(36px);
         @include inuit-rem(margin-left, 50px);
-        @media screen and (min-width: 1270px) {
+        @media screen and (min-width: 1320px) {
             display: none;
         }
     }
@@ -94,28 +96,30 @@
 .site-nav {
     &__item{
         &_dropdown {
+            //padding-bottom: 12px;
+            //padding-top: 12px;
             &::after {
                 font-family: FontAwesome;
                 font-size: 0.8em;
                 content: "\f078";
+                color: black;
                 @include inuit-rem(padding-right, 6px);
             }
-            padding: 12px 0;
-            @media screen and (max-width: 1270px) {
+            @media screen and (max-width: 1320px) {
                 padding-left: 32px;
             }
             &:hover, 
             &:focus {
                 background: white;
                 box-shadow: 2px 7px 10px rgba(0,0,0,0.3);
-                @media screen and (max-width: 1270px) {
+                @media screen and (max-width: 1320px) {
                     box-shadow: none;
                     &::after {
                         display: none;
                     }
                 }
                 & .site-nav__link {
-                    color: black;
+                    color: #ffa162;
                 }
                 & .site-nav__dropdown {
                     opacity: 1;
@@ -124,7 +128,7 @@
                     background: white;
                     box-shadow: 2px 7px 10px rgba(0,0,0,0.3);
                     width: 10em;
-                    @media screen and (max-width: 1270px) {
+                    @media screen and (max-width: 1320px) {
                         position: static;
                         box-shadow: none;
                     }
@@ -137,22 +141,32 @@
     }
     &__link {
         &_dropdown {
-            padding: 12px 6px;
-            @media screen and (max-width: 1270px) {
+            //padding: 12px 6px;
+            @media screen and (max-width: 1320px) {
                 padding-left: 0;
+            }
+            &:hover {
+                color: #ffa162;
             }
         }
     }
     &__dropdown {
         transition: 0.2s;
-        margin-top: 12px;
+        margin-top: 28px;
+        margin-left: -28px;
         opacity: 0;
         //height: 0;
         position: absolute;
         transition: 0.2s;
+        width: 10em;
         &-item {
             &:nth-child(n+2) {
                 margin-top: $inuit-global-spacing-unit-small;
+            }
+        }
+        &-link {
+            &:hover {
+                color: #ffa162;
             }
         }
     }
@@ -161,7 +175,7 @@
 .accessible-access {
     background: white;
     box-shadow: 2px 7px 10px rgba(0,0,0,0.3);
-    @media screen and (max-width: 1270px) {
+    @media screen and (max-width: 1320px) {
         box-shadow: none;
         &::after {
             display: none;
@@ -177,7 +191,7 @@
         background: white;
         box-shadow: 2px 7px 10px rgba(0,0,0,0.3);
         width: 10em;
-        @media screen and (max-width: 1270px) {
+        @media screen and (max-width: 1320px) {
             position: static;
             box-shadow: none;
         }

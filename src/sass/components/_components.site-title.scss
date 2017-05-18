@@ -1,7 +1,6 @@
 .site-title {
     text-transform: uppercase;
     order: 2;
-    color: white;
     @include inuit-rem(max-height, 36px);
     font-weight: 600;
     margin-bottom: 0;
@@ -9,7 +8,11 @@
     align-items: center;
     @media screen and (min-width: 1270px) {
         @include inuit-font-size(22px);
-        max-height: auto;
+        //max-height: auto;
+
+        a {
+            padding: 1.5rem;
+        }
     }
     &__logo {
         display: inline-block;
