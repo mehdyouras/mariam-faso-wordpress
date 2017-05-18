@@ -9,14 +9,18 @@
     color: white;
     text-decoration: none;
     @include inuit-rem(padding, 10px);
-    transition: 0.2s;
+    transition: 0.3s;
     &:hover {
-        transform: scale(1.1);
+        //border-color: #ffa162;
+        &::before {
+            color: #ffa162;
+        }
     }
     &::before {
+        transition: 0.3s;
         font-family: FontAwesome;
         content: "";
-        @include inuit-rem(margin-right, 5px);
+        margin-right: $inuit-global-spacing-unit-tiny;
     }
     &_dark {
         color: black;

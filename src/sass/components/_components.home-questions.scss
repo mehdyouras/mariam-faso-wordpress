@@ -11,15 +11,19 @@
             width: 50%;
             padding: 2*$inuit-global-spacing-unit $inuit-global-spacing-unit;
         }
-         @media screen and (min-width: 1440px) {
+        @media screen and (min-width: 1440px) {
             display: flex;
-            justify-content: center;
+            justify-content: space-around;
+            align-items: center;
             padding: 3*$inuit-global-spacing-unit $inuit-global-spacing-unit-small;
             &::after {
                 font-family: fontAwesome;
-                @include inuit-font-size(200px);
+                @include inuit-font-size(136px);
                 margin-left: 0.2em;
             }
+        }
+        @media screen and (min-width: 2000px) {
+            justify-content: center;
         }
         &_bcg-dark {
             color: white;
