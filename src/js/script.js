@@ -7,6 +7,12 @@ const openNav = function(oEvent) {
             closeNav(oEvent);
         }
     });
+    document.onkeydown = function(evt) {
+        evt = evt || window.event;
+        if (evt.keyCode == 27) {
+            closeNav(evt);
+        }
+    };
 }
 const closeNav = function(oEvent) {
     oEvent.preventDefault();

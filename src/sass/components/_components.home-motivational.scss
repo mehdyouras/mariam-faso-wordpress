@@ -1,31 +1,66 @@
 .home-motivational {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     padding-bottom: $inuit-global-spacing-unit;
+    margin-top: inuit-rem(140px);
+    margin-left: $inuit-global-spacing-unit-small;
+    //@media screen and (min-width: 768px) {
+    //    background: rgba(0, 0, 0, 0.3);
+    //    position: absolute;
+    //    bottom: 0;
+    //    width: 100%;
+    //}
+    @media screen and (min-width: 520px) {
+        //align-items: center;
+    }
     @media screen and (min-width: 768px) {
-        background: rgba(0, 0, 0, 0.3);
-        position: absolute;
+        margin-left: $inuit-global-spacing-unit;
+        //position: absolute;
         bottom: 0;
-        width: 100%;
+        //margin: auto;
+        //width: 100%;
+    }
+    @media screen and (min-width: 1320px) {
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
     }
     &__title {
         color: white;
         display: flex;
         flex-direction: column;
-        @media screen and (min-width: 768px) {
-            display: block;
-            text-align: center;
-            margin-bottom: $inuit-global-spacing-unit-tiny;
+        //@media screen and (min-width: 768px) {
+        //    display: block;
+        //    text-align: center;
+        //    margin-bottom: $inuit-global-spacing-unit-tiny;
+        //}
+        @media screen and (min-width: 520px) {
+            //flex-direction: row;
         }
     }
     &__item {
-        @include inuit-rem(padding-left, $inuit-global-spacing-unit);
-        background: rgba(0, 0, 0, 0.6);
+        //@include inuit-rem(padding-left, $inuit-global-spacing-unit);
+        //background: rgba(0, 0, 0, 0.6);
         margin-right: auto;
-        @include inuit-font-size(20px);
-        @media screen and (min-width: 768px) {
-            padding: 0;
-            background: 0;
+        @include inuit-font-size(32px);
+            //@media screen and (min-width: 768px) {
+            //    padding: 0;
+            //    background: 0;
+            //}
+        @media screen and (min-width: 520px) {
+            padding-left: 0;
+            background: none;
+        }
+        @media screen and (min-width: 1320px) {
+            @include inuit-font-size(48px);
+        }
+        @media screen and (min-width: 1320px) {
+            @include inuit-font-size(48px);
+        }
+        @media screen and (min-width: 1600px) {
+            @include inuit-font-size(80px);
+            line-height: 1.3;
         }
     }
 }

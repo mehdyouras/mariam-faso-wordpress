@@ -58,6 +58,7 @@ gulp.task("watch", function() {
     gulp.watch("src/sass/**", ["css"]);
     gulp.watch("src/pug/**", ["html"]);
     gulp.watch("src/js/**", ["js"]);
+    gulp.watch("src/*.php", ["php"]);
 });
 // --- Aliases
 gulp.task("default", ["css", "html", "js", "images", "fonts","php"]);
