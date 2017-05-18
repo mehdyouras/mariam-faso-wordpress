@@ -1,13 +1,13 @@
 <?php
 
-add_action('init', 'dw_create_custom_post_types');
+add_action('init', 'mf_create_custom_post_types');
 add_theme_support('post-thumbnails');
 
 register_nav_menu('header', 'Menu principale affiché dans le header');
-function dw_get_nav_items($location) {
+function mf_get_nav_items($location) {
 
     // récupérer les items du menu $location et les transformer en un objet contenant $link et $label
-    $id = dw_get_nav_id($location);
+    $id = mf_get_nav_id($location);
     if(!$id) {
         return [];
 
@@ -35,7 +35,7 @@ function dw_get_nav_items($location) {
 
 // Get menu ID from location
 
-function dw_get_nav_id($location) {
+function mf_get_nav_id($location) {
     $id = false;
     foreach(get_nav_menu_locations() as $navLocation => $id) {
         if($navLocation == $location) {
@@ -46,29 +46,29 @@ function dw_get_nav_id($location) {
 }
 
 // Get theme asset URI
-function get_dw_asset($resource) {
+function get_mf_asset($resource) {
     return get_template_directory_uri().'/assets/'.trim($resource);
 }
 
 // Echo theme asset URI
 
-function dw_asset($resource) {
-    echo get_dw_asset($resource);
+function mf_asset($resource) {
+    echo get_mf_asset($resource);
 }
 
 // Output a customizable excerpt
 
-function dw_get_the_excerpt($length=null) {
+function mf_get_the_excerpt($length=null) {
     $excerpt = get_the_excerpt();
     if(is_null($length) || strlen($excerpt) <= $length) return $excerpt;
     return trim(substr($excerpt, 0, $length)).'&hellip;';
 }
 
-function dw_the_excerpt($length=null) {
-    echo dw_get_the_excerpt($length);
+function mf_the_excerpt($length=null) {
+    echo mf_get_the_excerpt($length);
 }
 
-function dw_create_custom_post_types() {
+function mf_create_custom_post_types() {
     register_post_type('trip',[
         'label' => 'Voyages',
         'labels' => [
@@ -98,7 +98,7 @@ register_taxonomy('places', 'trip', [
  * Return the places taxonomy for current post (in the loop)
  */
 
-function dw_get_the_places($glue = '', $prefix = '', $suffix = '') {
+function mf_get_the_places($glue = '', $prefix = '', $suffix = '') {
 
     $terms = wp_get_post_terms(get_the_ID(), 'places', ['orderby' => 'name', 'order' => 'ASC', 'fields' => 'all']);
 
@@ -116,15 +116,15 @@ function dw_get_the_places($glue = '', $prefix = '', $suffix = '') {
  * Echo the places taxonomy for current post (in the loop)
  */
 
-function dw_the_places($glue = '', $prefix = '', $suffix = '') {
-    echo dw_get_the_places($glue, $prefix, $suffix);
+function mf_the_places($glue = '', $prefix = '', $suffix = '') {
+    echo mf_get_the_places($glue, $prefix, $suffix);
 }
 
 /**
  * Returns string (empty, singular or plural) based on given number
  */
 
-function dw_chose_singularity($number, $singular, $plural, $empty = null) {
+function mf_chose_singularity($number, $singular, $plural, $empty = null) {
     switch(intval($number)) {
         case 0 :
             if(is_null($empty)) break;

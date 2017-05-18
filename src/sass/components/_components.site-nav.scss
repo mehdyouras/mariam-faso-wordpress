@@ -28,8 +28,9 @@
         }
     }
     &__item {
-        @include inuit-rem(padding-left, 32px);
-        @include inuit-rem(margin-bottom, $inuit-global-spacing-unit);
+        //@include inuit-rem(padding-left, 32px);
+        //@include inuit-rem(margin-bottom, $inuit-global-spacing-unit);
+        padding: 28px;
         text-decoration: none;
         display: block;
         transition: 0.3s;

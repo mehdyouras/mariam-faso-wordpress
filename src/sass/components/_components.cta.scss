@@ -2,7 +2,7 @@
     @include inuit-font-size(14px);
     font-family: $headings-font-stack;
     font-weight: 600;
-    max-width: 97%;
+    //max-width: 97%;
     text-transform: uppercase;
     border: 1px solid white;
     @include inuit-rem(border-radius, 3px);
@@ -30,14 +30,10 @@
         background: rgba(0, 0, 0, 0.2);
     }
     &_no-border {
-        @include inuit-rem(margin-bottom, $inuit-global-spacing-unit);
-         @media screen and (min-width: 1270px) {
              margin-bottom: 0;
              border: 0;
-
              &:hover {
                  transform: scale(1);
-             }
          }
     }
 }

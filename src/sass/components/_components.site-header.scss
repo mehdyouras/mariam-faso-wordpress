@@ -2,19 +2,24 @@
     display: flex;
     align-items: center;
     background: white;
-    width: 30%;
-    margin: auto;
+    width: 19em;
+    margin-left: 1.75rem;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    justify-content: space-around;
     @include inuit-rem(padding-top, $inuit-global-spacing-unit*$inuit-global-spacing-unit-factor-small);
     @include inuit-rem(padding-bottom, $inuit-global-spacing-unit*$inuit-global-spacing-unit-factor-small);
     @include inuit-rem(margin-bottom, $inuit-global-spacing-unit);
+    @media screen and (max-width: 430px) {
+        margin-right:auto;
+        margin-left: auto;
+        width: 90%;
+    }
     @media screen and (min-width: 1320px) {
         flex-direction: row-reverse;
         justify-content: space-between;
         padding: 0;
         width: 85%;
-
-
+        margin: auto;
     }
     @media screen and (min-width: 2000px) {
         justify-content: center;
