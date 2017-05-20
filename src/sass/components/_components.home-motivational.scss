@@ -15,16 +15,22 @@
         //align-items: center;
     }
     @media screen and (min-width: 768px) {
-        margin-left: $inuit-global-spacing-unit;
+        //margin-left: $inuit-global-spacing-unit;
         //position: absolute;
-        bottom: 0;
+        //bottom: 0;
         //margin: auto;
         //width: 100%;
-    }
-    @media screen and (min-width: 1320px) {
         width: 90%;
         margin-right: auto;
         margin-left: auto;
+        position: absolute;
+        right: 5%;
+        bottom: 7%;
+    }
+    @media screen and (min-width: 1320px) {
+        //width: 90%;
+        //margin-right: auto;
+        //margin-left: auto;
     }
     @media screen and (min-width: 1600px) {
         width: 90%;
@@ -60,13 +66,7 @@
             padding-left: 0;
             background: none;
         }
-        @media screen and (min-width: 1320px) {
-            @include inuit-font-size(48px);
-        }
-        @media screen and (min-width: 1320px) {
-            @include inuit-font-size(48px);
-        }
-        @media screen and (min-width: 1600px) {
+        @media screen and (min-width: 768px) {
             @include inuit-font-size(80px);
             line-height: 1.3;
         }
