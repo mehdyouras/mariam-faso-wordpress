@@ -8,7 +8,7 @@
         </ul>
     </section>
     <section class="footer__item footer-contact">
-        <h3><a class="footer-contact__contact-link" href="#">Nous contacter</a></h3>
+        <h3><a class="footer-contact__contact-link cta cta_no-border cta_title" href="#">Nous contacter</a></h3>
         <address class="footer-contact__content"><span class="footer-contact__content-item">Mariam-Faso ASBL</span><span class="footer-contact__content-item">Association sociale</span><span class="footer-contact__content-item">Rue de la gare, 15</span><span class="footer-contact__content-item">6600 BASTOGNE</span><span class="footer-contact__content-item footer-contact__content-item_icon-phone">+32 4 79 21 57 44</span><span class="footer-contact__content-item footer-contact__content-item_icon-email">info@mariam-faso.be</span></address>
     </section>
     <script src="<?php mf_asset('js/script.js'); ?>"></script>

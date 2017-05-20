@@ -24,6 +24,7 @@
     &-partners {
         &__item {
             max-width: 16em;
+            margin-bottom: $inuit-global-spacing-unit;
             &:nth-child(n+1) {
                 margin-top: $inuit-global-spacing-unit-small;
             }
@@ -37,12 +38,8 @@
             margin-left: inuit-rem(90px);
         }
         &__contact-link {
-            color: white;
-            &::after {
-                font-family: FontAwesome;
-                content: "\f061";
-                @include inuit-rem(margin-left, $inuit-global-spacing-unit-tiny);
-            }
+            //color: white;
+            margin-left: -26px;
         }
         &__content-item {
             display: block;

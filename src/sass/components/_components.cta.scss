@@ -38,8 +38,11 @@
     &_no-border {
              margin-bottom: 0;
              border: 0;
-             &:hover {
-                 transform: scale(1);
-         }
+    }
+    &_title {
+        padding: 0;
+        font-size: inherit;
+        text-transform: inherit;
+        line-height: inherit;
     }
 }
