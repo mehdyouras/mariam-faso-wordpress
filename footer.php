@@ -3,8 +3,8 @@
     <section class="footer__item footer-partners">
         <h3>Nos partenaires</h3>
         <ul class="o-list-inline">
-            <li class="footer-partners__item"><a href="https://www.kbs-frb.be/"><img src="<?php mf_asset('img/fondation-roi-baudouin.png'); ?>" alt="Logo de la Fondation Roi Baudouin"></a></li>
-            <li class="footer-partners__item"><a href="http://www.federation-wallonie-bruxelles.be/"><img src="<?php mf_asset('img/wallonie-bruxelles.png'); ?>" alt="Logo de la Fédération Wallonie-Bruxelles"></a></li>
+            <li class="footer-partners__item"><a href="https://www.kbs-frb.be/"><img src="<?php mf_asset('img/kbs_logo.svg'); ?>" alt="Logo de la Fondation Roi Baudouin"></a></li>
+            <li class="footer-partners__item"><a href="http://www.federation-wallonie-bruxelles.be/"><img src="<?php mf_asset('img/fwb_logo.svg'); ?>" alt="Logo de la Fédération Wallonie-Bruxelles"></a></li>
         </ul>
     </section>
     <section class="footer__item footer-contact">
