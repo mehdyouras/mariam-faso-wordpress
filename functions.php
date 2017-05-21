@@ -3,6 +3,40 @@
 add_action('init', 'mf_create_custom_post_types');
 add_theme_support('post-thumbnails');
 
+// Ajoute page options d'ACF
+
+if( function_exists('acf_add_options_page') ) {
+
+    acf_add_options_page(array(
+        'page_title' 	=> 'Informations sur Mariam-Faso',
+        'menu_title'	=> 'Mariam-Faso',
+        'menu_slug' 	=> 'mf',
+        'capability'	=> 'edit_posts',
+        'redirect'		=> true,
+        'icon_url'      => 'dashicons-id-alt'
+    ));
+    
+    acf_add_options_sub_page(array(
+        'page_title' 	=> 'Coordonnées de Mariam-Faso',
+        'menu_title'	=> 'Coordonnées',
+        'parent_slug'	=> 'mf',
+    ));
+
+    acf_add_options_sub_page(array(
+        'page_title' 	=> 'Partenaires et sponsors de Mariam-Faso',
+        'menu_title'	=> 'Partenaires',
+        'parent_slug'	=> 'mf',
+    ));
+
+    acf_add_options_sub_page(array(
+        'page_title' 	=> 'Informations banquaires de Mariam-Faso',
+        'menu_title'	=> 'Informations banquaires',
+        'parent_slug'	=> 'mf',
+    ));
+
+
+}
+
 register_nav_menu('header', 'Menu principale affiché dans le header');
 function mf_get_nav_items($location) {
 
