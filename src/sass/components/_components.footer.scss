@@ -106,8 +106,21 @@
         &-link {
             color:white;
             transition: 0.2s;
+            position: relative;
             &:hover {
                 color: $mf-orange;
+                & .footer__social-text {
+                    width: auto;
+                    height: initial;
+                    margin: 0;
+                    overflow: auto;
+                    padding: inherit;
+                    position: absolute;
+                    top: 45px;
+                    left: 0;
+                    clip: auto;
+                    border: auto;
+                }
             }
             &:nth-child(1)::before {
                 font-family: FontAwesome;
@@ -118,11 +131,20 @@
                 content: "\f16a";
             }
             &:nth-child(n+2) {
-                margin-left:2em; 
+                margin-left:2em;
             }
         }
         &-text {
-            @include inuit-hidden-visually();
+            font-size: 0.4em;
+            //transition: 0.1s;
+            border: 0;
+            clip: rect(0 0 0 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
         }
     }
 }
