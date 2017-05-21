@@ -1,3 +1,5 @@
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
 <footer class="footer">
     <h2 aria-hidden="true">Pied de page</h2>
     <div class="footer__container">
@@ -12,9 +14,9 @@
             <h3><a class="footer-donation__donation-link cta cta_no-border cta_title" href="#">Faire un don</a></h3>
             <dl class="footer-donation__list">
                 <dt class="footer-donation__dt">Numéro de compte&nbsp;:</dt>
-                <dd class="footer-donation__dd">BE 10 000 0000 0404</dd>
+                <dd class="footer-donation__dd"><?php the_field('iban_frb', 'option');?></dd>
                 <dt class="footer-donation__dt">Communication structurée&nbsp;:</dt>
-                <dd class="footer-donation__dd">128/2338/00037</dd>
+                <dd class="footer-donation__dd"><?php the_field('com_frb', 'option');?></dd>
             </dl>
         </section>
         <section class="footer__item footer-project">
@@ -28,17 +30,30 @@
         </section>
         <section class="footer__item footer-contact">
             <h3><a class="footer-contact__contact-link cta cta_no-border cta_title" href="#">Nous contacter</a></h3>
-            <address class="footer-contact__content"><span class="footer-contact__content-item">Mariam-Faso ASBL</span><span class="footer-contact__content-item">Association sociale</span><span class="footer-contact__content-item">Rue de la gare, 15</span><span class="footer-contact__content-item">6600 BASTOGNE</span><span class="footer-contact__content-item footer-contact__content-item_icon-phone">+32 4 79 21 57 44</span><span class="footer-contact__content-item footer-contact__content-item_icon-email">info@mariam-faso.be</span></address>
+            <address class="footer-contact__content">
+                <span class="footer-contact__content-item">Mariam-Faso ASBL</span>
+                <span class="footer-contact__content-item">Association sociale</span>
+                <span class="footer-contact__content-item"><?php the_field('street', 'option');?></span>
+                <span class="footer-contact__content-item"><?php the_field('locality', 'option');?></span>
+                <span class="footer-contact__content-item footer-contact__content-item_icon-phone"><?php the_field('phone', 'option');?></span>
+                <span class="footer-contact__content-item footer-contact__content-item_icon-email"><?php the_field('email', 'option');?></span>
+            </address>
         </section>
     </div>
     <section class="footer__social">
-        <a class="footer__social-link" title="Facebook" href="#"><span class="footer__social-text">Facebook</span></a>
+        <?php if( have_rows('social_network') ): ?>
+        <?php while ( have_rows('social_network') ) : the_row(); ?>
+            <?php var_dump(get_sub_field('social_network_name'));?>
+            <a class="footer__social-link" title="Facebook" href="#"><span class="footer__social-text">Facebook</span></a>
+        <?php endwhile; endif;?>
         <a class="footer__social-link" title="Youtube" href="#"><span class="footer__social-text">Youtube</span></a>
     </section>
     <section class="footer__copyright">
         <small>&copy; 2017 Mehdy Ouras</small>
     </section>
 </footer>
+<?php endwhile;?>
+<?php endif; ?>
 <script src="<?php mf_asset('js/script.js'); ?>"></script>
 </section>
 </body>
