@@ -114,9 +114,11 @@
                 content: "\f082";
             }
             &:nth-child(2)::before {
-                margin-left:2em;
                 font-family: FontAwesome;
                 content: "\f16a";
+            }
+            &:nth-child(n+2) {
+                margin-left:2em; 
             }
         }
         &-text {
