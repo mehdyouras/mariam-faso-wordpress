@@ -15,7 +15,7 @@ if( function_exists('acf_add_options_page') ) {
         'redirect'		=> true,
         'icon_url'      => 'dashicons-id-alt'
     ));
-    
+
     acf_add_options_sub_page(array(
         'page_title' 	=> 'Coordonnées de Mariam-Faso',
         'menu_title'	=> 'Coordonnées',
