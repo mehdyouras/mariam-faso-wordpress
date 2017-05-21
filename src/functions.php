@@ -33,6 +33,11 @@ if( function_exists('acf_add_options_page') ) {
         'menu_title'	=> 'Informations banquaires',
         'parent_slug'	=> 'mf',
     ));
+    acf_add_options_sub_page(array(
+        'page_title' 	=> 'Réseaux sociaux',
+        'menu_title'	=> 'Réseaux sociaux',
+        'parent_slug'	=> 'mf',
+    ));
 
 
 }
