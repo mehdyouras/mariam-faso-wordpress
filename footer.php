@@ -55,7 +55,7 @@
                 $sn_name = get_sub_field('social_network_name');
                 $sn_link = get_sub_field('social_network_link');
                 ?>
-            <a class="footer__social-link footer__social-link<?= $sn_name['label']; ?>" title="<?= $sn_name['value']; ?>" href="<?= $sn_link; ?>"><span class="footer__social-text"><?= $sn_name['value'];?></span></a>
+            <a class="footer__social-link footer__social-link<?= $sn_name['value']; ?>" title="<?= $sn_name['label']; ?>" href="<?= $sn_link; ?>"><span class="footer__social-text"><?= $sn_name['label'];?></span></a>
         <?php endwhile; endif;?>
     </section>
     <section class="footer__copyright">
