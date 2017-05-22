@@ -1,14 +1,15 @@
 .site-header {
-    transition: 0.2s;
+    //transition: width 0.2s;
+    //transition: position none;
     display: flex;
     align-items: center;
     background: white;
     width: 19em;
     margin-left: $inuit-global-spacing-unit-small;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.09), 0 3px 6px rgba(0,0,0,0.13);
     justify-content: space-around;
-    @include inuit-rem(padding-top, $inuit-global-spacing-unit*$inuit-global-spacing-unit-factor-small);
-    @include inuit-rem(padding-bottom, $inuit-global-spacing-unit*$inuit-global-spacing-unit-factor-small);
+    @include inuit-rem(padding-top, $inuit-global-spacing-unit-small);
+    @include inuit-rem(padding-bottom, $inuit-global-spacing-unit-small);
     @include inuit-rem(margin-bottom, $inuit-global-spacing-unit);
     @media screen and (max-width: 430px) {
         margin-right:auto;
@@ -36,12 +37,14 @@
         justify-content: flex-start;
         margin-left: 0;
         padding-left: 1.75rem;
+        padding: $inuit-global-spacing-unit-small 5%;
         .site-title {
-            margin-left: $inuit-global-spacing-unit;
+            //margin-left: $inuit-global-spacing-unit;
         }
         @media screen and (min-width: 1320px) {
             width: 100%;
             justify-content: space-between;
+            padding: 0 5%;
         }
         @media screen and (min-width: 2000px) {
             justify-content: center;
