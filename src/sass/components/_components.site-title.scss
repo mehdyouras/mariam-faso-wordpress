@@ -10,8 +10,8 @@
         @include inuit-font-size(22px);
         //max-height: auto;
 
-        a {
-            padding: 1.5rem;
+        &__link {
+            padding: .875rem 1em;
         }
     }
     &__logo {

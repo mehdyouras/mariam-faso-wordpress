@@ -11,7 +11,7 @@
 <body>
 <header class="header <?php if(!is_home()) :?><?php endif; ?>">
     <div class="site-header">
-        <h1 class="site-title"><a class="site-title" href="index.html"><img class="site-title__logo" src="<?php mf_asset('img/logo.svg'); ?>" alt"Logo de Mariam-Faso"><span class="site-title__content">Marriam-Faso</span></a></h1>
+        <h1 class="site-title"><a class="site-title__link" href="index.html"><img class="site-title__logo" src="<?php mf_asset('img/logo.svg'); ?>" alt"Logo de Mariam-Faso"><span class="site-title__content">Marriam-Faso</span></a></h1>
         <a class="hamburger-menu" href="#"></a>
         <nav class="site-nav">
             <h2 aria-hidden="true">Navigation principale</h2>
