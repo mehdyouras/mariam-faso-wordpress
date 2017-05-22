@@ -41,12 +41,14 @@
         </section>
     </div>
     <section class="footer__social">
-        <?php if( have_rows('social_network') ): ?>
-        <?php while ( have_rows('social_network') ) : the_row(); ?>
-            <?php var_dump(get_sub_field('social_network_name'));?>
-            <a class="footer__social-link" title="Facebook" href="#"><span class="footer__social-text">Facebook</span></a>
+        <?php if( have_rows('social_network', 'option') ): ?>
+        <?php while ( have_rows('social_network', 'option') ) : the_row(); ?>
+            <?php
+                $sn_name = get_sub_field('social_network_name');
+                $sn_link = get_sub_field('social_network_link');
+                ?>
+            <a class="footer__social-link footer__social-link<?= $sn_name['label']; ?>" title="<?= $sn_name['value']; ?>" href="<?= $sn_link; ?>"><span class="footer__social-text"><?= $sn_name['value'];?></span></a>
         <?php endwhile; endif;?>
-        <a class="footer__social-link" title="Youtube" href="#"><span class="footer__social-text">Youtube</span></a>
     </section>
     <section class="footer__copyright">
         <small>&copy; 2017 Mehdy Ouras</small>
