@@ -5,14 +5,14 @@
         <section class="home-questions__item home-questions__item_bcg-dark">
             <div class="home-questions__content-wrapper_left">
                 <h3 class="home-questions__title">Qui sommes nous ?</h3>
-                <p class="home-questions__content"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias et quibusdam facilis excepturi animi tempore ea quo beatae quidem quasi. Sed cupiditate labore sint sapiente, nesciunt, obcaecati corporis consectetur inventore!</p>
+                <p class="home-questions__content"><?php the_field('home_about_us') ?></p>
                 <a class="cta" href="#">En savoir plus</a>
             </div>
         </section>
         <section class="home-questions__item home-questions__item_bcg-light">
             <div class="home-questions__content-wrapper_right">
                 <h3 class="questions__title questions__title_dark">Nous aider ?</h3>
-                <p class="questions__content"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, fugiat quam nihil ipsa, adipisci minima sunt provident quae, dolor nemo repellendus voluptatem expedita saepe omnis soluta blanditiis dolorem iure earum!</p>
+                <p class="questions__content"><?php the_field('home_help_us') ?></p>
                 <a class="cta cta_dark" href="#">Faire un don</a>
             </div>
         </section>
