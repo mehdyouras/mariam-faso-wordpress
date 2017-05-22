@@ -15,29 +15,52 @@
         margin: 0;
         flex-direction: column;
         flex-wrap: wrap;
-        background: url("../img/list-events-bcg.png");
-        background-size: 180px;
+
         @media screen and (min-width: 768px) {
             width: 50%;
         }
         &-container {
-            padding: $inuit-global-spacing-unit-small;
+            display: flex;
+            //padding: $inuit-global-spacing-unit-small;
             transition: 0.2s;
-            background-image: url("../img/fa-arrow-right.svg");
-            background-repeat: no-repeat;
-            background-position: 110% 50%;
-            background-size: 5%;
-            transition: 0.2s;
+            //background-image: url("../img/fa-arrow-right.svg");
+            //background-repeat: no-repeat;
+            //background-position: 110% 50%;
+            //background-size: 5%;
+            //transition: 0.2s;
+            flex-direction: column;
             &:hover {
-                background-position: 90% 50%;
+                //background-position: 90% 50%;
             }
+        }
+        &-link {
+            background: url("../img/list-events-bcg.png");
+            background-size: 180px;
+            padding: $inuit-global-spacing-unit-small;
+            //background: #ffcba8;
+            min-width: 10em;
+        }
+        &-description {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: $inuit-global-spacing-unit $inuit-global-spacing-unit-small 2*$inuit-global-spacing-unit;
+            @media screen and (max-width: 1220px) {
+                //display: ;
+            }
+        }
+        &-title {
+            margin-bottom: 0;
         }
     }
     &__cta-container {
-        background: black;
+        //background: url("../img/list-events-bcg.png");
+        background-size: 180px;
+        //background: black;
         display: flex;
         justify-content: center;
         align-items: center;
         padding: $inuit-global-spacing-unit-small;
+        padding-bottom: $inuit-global-spacing-unit;
     }
 }

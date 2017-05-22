@@ -24,28 +24,25 @@
             <li class="home-events__nexts-container">
                 <a class="home-events__nexts-link" href="#">
                     <time>22/06</time>
-                    <p>Titre de l'event</p>
+                    <p class="home-events__nexts-title">Titre de l'event</p>
                 </a>
+                <p class="home-events__nexts-description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad aliquid, amet asperiores atque.
+                    <a class="read-more" href="#">En savoir plus</a>
+                </p>
             </li>
             <li class="home-events__nexts-container">
                 <a class="home-events__nexts-link" href="#">
                     <time>22/06</time>
-                    <p>Titre de l'event</p>
+                    <p class="home-events__nexts-title">Titre de l'event</p>
                 </a>
+                <p class="home-events__nexts-description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad aliquid, amet asperiores atque.
+                    <a class="read-more" href="#">En savoir plus</a>
+                </p>
             </li>
-            <li class="home-events__nexts-container">
-                <a class="home-events__nexts-link" href="#">
-                    <time>22/06</time>
-                    <p>Titre de l'event</p>
-                </a>
-            </li>
-            <li class="home-events__nexts-container">
-                <a class="home-events__nexts-link" href="#">
-                    <time>22/06</time>
-                    <p>Titre de l'event</p>
-                </a>
-            </li>
-            <li class="home-events__cta-container"><a class="cta" href="agenda.html">Découvrir tous nos évènements</a></li>
+
+            <li class="home-events__cta-container"><a class="cta cta_dark" href="agenda.html">Découvrir tous nos évènements</a></li>
         </ol>
     </section>
     <section class="home-full-image-block home-gallery">
