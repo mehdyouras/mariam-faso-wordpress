@@ -166,6 +166,18 @@ function mf_create_custom_post_types() {
         'menu_icon' => 'dashicons-hammer',
         'public' => true,
     ]);
+
+    register_post_type('event',[
+        'label' => 'Événements',
+        'labels' => [
+            'singular_name' => 'Événement',
+            'add_new' => 'Ajouter un événement'
+        ],
+        'description' => "Type d'article permettant d'ajouter un évènement à la liste des évènements du site",
+        'menu_position' => "22",
+        'menu_icon' => 'dashicons-calendar-alt',
+        'public' => true,
+    ]);
 }
 
 register_taxonomy('places', 'trip', [
