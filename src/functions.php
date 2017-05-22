@@ -209,3 +209,32 @@ function mf_chose_singularity($number, $singular, $plural, $empty = null) {
     }
     return str_replace(':number', $number, $plural);;
 }
+
+/**
+ * Returns the motivational with commas and a dot at the end
+ */
+
+function mf_get_the_motivational() {
+    $motivational = [];
+    $motivational_length = count( get_field('motivational') );
+    if( have_rows('motivational') ) {
+        while ( have_rows('motivational') ) { the_row();
+
+            $motivational_line = get_sub_field('motivational_line');
+            if(get_row_index() < $motivational_length) {
+                $line = $motivational_line.",";
+            } else {
+                $line = $motivational_line.".";
+            }
+            array_push($motivational, $line);
+        }
+    }
+    return $motivational;
+}
+
+/**
+ * Echo the motivational with commas and a dot at the end
+ */
+function mf_the_motivational () {
+    echo mf_get_the_motivational();
+}

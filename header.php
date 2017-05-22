@@ -33,7 +33,11 @@
         </nav>
     </div>
     <section class="home-motivational">
-        <h2 class="home-motivational__title"><span class="home-motivational__item">Dévelopmment,</span> <span class="home-motivational__item">Echange,</span> <span class="home-motivational__item">Solidarité,</span> <span class="home-motivational__item">Education.</span></h2>
+        <h2 class="home-motivational__title">
+            <?php foreach (mf_get_the_motivational() as $line): ?>
+                <span class="home-motivational__item"><?= $line ?></span>
+            <?php endforeach; ?>
+        </h2>
         <a class="cta cta_over-image" href="#">Découvrir nos projets</a>
     </section>
 </header>
