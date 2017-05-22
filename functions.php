@@ -47,7 +47,8 @@ if( function_exists('acf_add_options_page') ) {
         'menu_slug' 	=> 'mf',
         'capability'	=> 'edit_posts',
         'redirect'		=> true,
-        'icon_url'      => 'dashicons-id-alt'
+        'icon_url'      => 'dashicons-id-alt',
+        'position'      => '2'
     ));
 
     acf_add_options_sub_page(array(
@@ -151,6 +152,18 @@ function mf_create_custom_post_types() {
         'description' => "Type d'article permettant d'ajouter des voyages à la section voyages du site",
         'menu_position' => "20",
         'menu_icon' => 'dashicons-palmtree',
+        'public' => true,
+    ]);
+
+    register_post_type('project',[
+        'label' => 'Projets',
+        'labels' => [
+            'singular_name' => 'Projet',
+            'add_new' => 'Ajouter un projet'
+        ],
+        'description' => "Type d'article permettant d'ajouter des projets à la liste des projets du site",
+        'menu_position' => "21",
+        'menu_icon' => 'dashicons-hammer',
         'public' => true,
     ]);
 }
