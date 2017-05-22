@@ -8,20 +8,22 @@
     @include inuit-rem(border-radius, 3px);
     color: white;
     text-decoration: none;
-    @include inuit-rem(padding, 10px);
     transition: 0.1s;
+    padding: $inuit-global-spacing-unit-small;
+    display: inline-flex;
+    align-items: center;
     &:hover {
         //border-color: #ffa162;
         &::before {
             color: #ffa162;
-            transform: translate(3px, 0);
+            transform: translate(5px, 0);
         }
     }
     &::before {
         transition: 0.3s;
         font-family: FontAwesome;
         content: "";
-        margin-right: $inuit-global-spacing-unit-tiny;
+        margin-right: $inuit-global-spacing-unit-small;
         display: inline-block;
     }
     &_dark {
@@ -45,4 +47,8 @@
         text-transform: inherit;
         line-height: inherit;
     }
+    &.cta_title::before {
+        font-size: 0.6em;
+    }
+
 }
