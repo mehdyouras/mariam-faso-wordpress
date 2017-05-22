@@ -16,7 +16,11 @@
     }
     &__logo {
         display: inline-block;
-        @include inuit-rem(max-height, 36px);
+        //@include inuit-rem(max-height, 36px);
         margin-right: 1em;
+        height: inuit-rem(56px);
+    }
+    &__content {
+        @include inuit-hidden-visually();
     }
 }
