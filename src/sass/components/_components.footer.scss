@@ -126,13 +126,25 @@
                     border: auto;
                 }
             }
-            &:nth-child(1)::before {
+            &_facebook::before {
                 font-family: FontAwesome;
                 content: "\f082";
             }
-            &:nth-child(2)::before {
+            &_youtube::before {
                 font-family: FontAwesome;
                 content: "\f16a";
+            }
+            &_twitter::before {
+                font-family: FontAwesome;
+                content: "\f099";
+            }
+            &_instagram::before {
+                font-family: FontAwesome;
+                content: "\f16d";
+            }
+            &_tumblr::before {
+                font-family: FontAwesome;
+                content: "\f174";
             }
             &:nth-child(n+2) {
                 margin-left:0.5em;
