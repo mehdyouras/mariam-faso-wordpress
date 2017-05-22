@@ -5,10 +5,18 @@
     <div class="footer__container">
         <section class="footer__item footer-partners">
             <h3>Nos partenaires</h3>
+            <?php if( have_rows('partners', 'option') ): ?>
             <ul class="o-list-inline">
-                <li class="footer-partners__item"><a href="https://www.kbs-frb.be/"><img src="<?php mf_asset('img/kbs_logo.svg'); ?>" alt="Logo de la Fondation Roi Baudouin"></a></li>
-                <li class="footer-partners__item"><a href="http://www.federation-wallonie-bruxelles.be/"><img src="<?php mf_asset('img/fwb_logo.svg'); ?>" alt="Logo de la Fédération Wallonie-Bruxelles"></a></li>
+                <?php while ( have_rows('partners', 'option') ) : the_row(); ?>
+                    <?php
+                        $partner_name = get_sub_field('partner_name');
+                        $partner_logo = get_sub_field('partner_logo');
+                        $partner_url = get_sub_field('partner_url');
+                    ?>
+                <li class="footer-partners__item"><a href="<?= $partner_url; ?>"><img src="<?= $partner_logo; ?>" alt="Logo de <?= $partner_name; ?>"></a></li>
+                <?php endwhile;?>
             </ul>
+            <?php endif; ?>
         </section>
         <section class="footer__item footer-donation">
             <h3><a class="footer-donation__donation-link cta cta_no-border cta_title" href="#">Faire un don</a></h3>
