@@ -147,7 +147,8 @@ function mf_create_custom_post_types() {
         'label' => 'Voyages',
         'labels' => [
             'singular_name' => 'Voyage',
-            'add_new' => 'Ajouter un voyage'
+            'add_new' => 'Ajouter un voyage',
+            'add_new_item' => 'Ajouter un nouveau voyage'
         ],
         'description' => "Type d'article permettant d'ajouter des voyages à la section voyages du site",
         'menu_position' => "20",
@@ -159,7 +160,8 @@ function mf_create_custom_post_types() {
         'label' => 'Projets',
         'labels' => [
             'singular_name' => 'Projet',
-            'add_new' => 'Ajouter un projet'
+            'add_new' => 'Ajouter un projet',
+            'add_new_item' => 'Ajouter un nouveau projet'
         ],
         'description' => "Type d'article permettant d'ajouter des projets à la liste des projets du site",
         'menu_position' => "21",
@@ -171,11 +173,25 @@ function mf_create_custom_post_types() {
         'label' => 'Événements',
         'labels' => [
             'singular_name' => 'Événement',
-            'add_new' => 'Ajouter un événement'
+            'add_new' => 'Ajouter un événement',
+            'add_new_item' => 'Ajouter un nouvel évènement'
         ],
         'description' => "Type d'article permettant d'ajouter un évènement à la liste des évènements du site",
         'menu_position' => "22",
         'menu_icon' => 'dashicons-calendar-alt',
+        'public' => true,
+    ]);
+
+    register_post_type('action',[
+        'label' => 'Actions',
+        'labels' => [
+            'singular_name' => 'Action',
+            'add_new' => 'Ajouter une action',
+            'add_new_item' => 'Ajouter une nouvelle action'
+        ],
+        'description' => "Type d'article permettant d'ajouter une action à la liste des actions du site",
+        'menu_position' => "23",
+        'menu_icon' => 'dashicons-carrot',
         'public' => true,
     ]);
 }

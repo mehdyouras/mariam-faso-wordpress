@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header();?>
 <section class="wrapper">
     <h2 aria-hidden="true">Contenu principal</h2>
     <div class="home-questions">

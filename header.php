@@ -9,7 +9,7 @@
     <title>Accueil - Mariam-Faso</title>
 </head>
 <body>
-<header class="header <?php if(!is_home()) :?><?php endif; ?>">
+<header class="header <?php if(!is_front_page()) :?>header_small<?php endif; ?>">
     <div class="site-header">
         <h1 class="site-title"><a class="site-title__link" href="index.html"><img class="site-title__logo" src="<?php mf_asset('img/logo.svg'); ?>" alt"Logo de Mariam-Faso"><span class="site-title__content">Marriam-Faso</span></a></h1>
         <a class="hamburger-menu" href="#"></a>
@@ -32,6 +32,7 @@
             </ul>
         </nav>
     </div>
+    <?php if(is_front_page()): ?>
     <section class="home-motivational">
         <h2 class="home-motivational__title">
             <?php foreach (mf_get_the_motivational() as $line): ?>
@@ -40,4 +41,5 @@
         </h2>
         <a class="cta cta_over-image" href="#">Découvrir nos projets</a>
     </section>
+    <?php endif; ?>
 </header>
