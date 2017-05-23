@@ -3,9 +3,9 @@
 Template Name: Projets
 */
 
-
+get_header();
 ?>
-<?php get_header(); ?>
+
 <section class="wrapper">
     <header class="section-header section-header_projects">
         <div class="section-header__content-container">
