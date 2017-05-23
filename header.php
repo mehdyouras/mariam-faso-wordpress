@@ -13,33 +13,9 @@
     <div class="site-header">
         <h1 class="site-title"><a class="site-title__link" href="index.html"><img class="site-title__logo" src="<?php mf_asset('img/logo.svg'); ?>" alt"Logo de Mariam-Faso"><span class="site-title__content">Marriam-Faso</span></a></h1>
         <a class="hamburger-menu" href="#"></a>
-        <nav class="site-nav">
-            <h2 aria-hidden="true">Navigation principale</h2>
-            <a class="site-nav__close-btn" href="#">&times;</a>
-            <ul class="o-list-bare site-nav__list">
-                <li class="site-nav__item active"><a class="site-nav__link" href="#">Accueil</a></li>
-                <li class="site-nav__item"><a class="site-nav__link" href="projects.html">Projets</a></li>
-                <li class="site-nav__item site-nav__item_dropdown">
-                    <a class="site-nav__link site-nav__link_dropdown" href="agenda.html" tabindex="-1">Agenda</a>
-                    <ul class="o-list-bare site-nav__dropdown">
-                        <li class="site-nav__dropdown-item"><a class="site-nav__dropdown-link" href="actions.html">Actions en cours</a></li>
-                        <li class="site-nav__dropdown-item"><a class="site-nav__dropdown-link" href="events.html">Evenements</a></li>
-                    </ul>
-                </li>
-                <li class="site-nav__item"><a class="site-nav__link" href="#">À propos</a></li>
-                <a class="site-nav__item cta cta_dark cta_no-border" href="#">Faire un don</a>
-                <a class="site-nav__item cta cta_dark cta_no-border" href="#">Participer</a>
-            </ul>
-        </nav>
+        <?php get_template_part('part', 'navbar');?>
     </div>
     <?php if(is_front_page()): ?>
-    <section class="home-motivational">
-        <h2 class="home-motivational__title">
-            <?php foreach (mf_get_the_motivational() as $line): ?>
-                <span class="home-motivational__item"><?= $line ?></span>
-            <?php endforeach; ?>
-        </h2>
-        <a class="cta cta_over-image" href="#">Découvrir nos projets</a>
-    </section>
+        <?php get_template_part('part', 'motivational');?>
     <?php endif; ?>
 </header>
