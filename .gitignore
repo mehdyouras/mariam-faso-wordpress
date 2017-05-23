@@ -3,3 +3,6 @@ assets/*
 node_modules/
 
 \.idea/
+
+/*.php
+!src/*
