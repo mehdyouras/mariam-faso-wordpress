@@ -8,7 +8,7 @@
     <header class="section-header section-header_projects">
         <div class="section-header__content-container">
             <h2 class="section-header__title">Nos projets</h2>
-            <blockquote class="section-header__intro">« Chez Mariam Faso, nous sommes convaincus de l’importance de l’instruction dans la lutte contre la pauvreté. Ce que nous voulons, c’est apporter aux jeunes une perspective d’avenir. »</blockquote>
+            <p class="section-header__intro"><?php the_field('projects_intro'); ?></p>
         </div>
     </header>
     <div class="projects content-wrapper">
