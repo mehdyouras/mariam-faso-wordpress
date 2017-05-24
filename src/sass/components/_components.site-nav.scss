@@ -44,7 +44,7 @@
         &:nth-last-child(2) {
             background:#ffcba8;
         }
-        &.active::after {
+        &.active::before {
             position: absolute;
             content: "";
             width: 100%;
