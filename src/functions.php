@@ -21,6 +21,13 @@ add_filter( 'wp_check_filetype_and_ext', function($data, $file, $filename, $mime
 
 }, 10, 4 );
 
+function my_acf_init() {
+
+    acf_update_setting('google_api_key', 'AIzaSyD-7K7R8PcRR3EaMdkoZMhb9npuLyGAiEw');
+}
+
+add_action('acf/init', 'my_acf_init');
+
 function cc_mime_types( $mimes ){
     $mimes['svg'] = 'image/svg+xml';
     return $mimes;
