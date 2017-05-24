@@ -17,19 +17,25 @@
             //margin-left: 2*$inuit-global-spacing-unit;
         }
     }
+    &__title {
+        margin-bottom: 14px;
+    }
+    &__info {
+        margin-bottom: $inuit-global-spacing-unit-small;
+    }
     &__content {
         display: flex;
         align-items: flex-start;
-        margin-top: $inuit-global-spacing-unit;
+        //margin-top: $inuit-global-spacing-unit;
         flex-direction: column;
     }
     &__thumbnail {
         width: 100%;
         max-width: 30em;
-        margin-top: 4px;
-        margin-right: $inuit-global-spacing-unit;
-        margin-right: 0;
-        margin-bottom: $inuit-global-spacing-unit;
+        //margin-top: 4px;
+        //margin-right: $inuit-global-spacing-unit;
+        //margin-right: 0;
+        margin-bottom: $inuit-global-spacing-unit-small;
 
     }
     &__header {
@@ -41,6 +47,14 @@
         &::before {
             font-family: FontAwesome;
             content: "\f041";
+            margin-right: inuit-rem(18px);
+        }
+    }
+    &__date {
+        display: block;
+        &::before {
+            font-family: FontAwesome;
+            content: "\f073";
             margin-right: $inuit-global-spacing-unit-tiny;
         }
     }
