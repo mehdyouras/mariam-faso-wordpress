@@ -279,3 +279,22 @@ function mf_get_the_motivational() {
 function mf_the_motivational () {
     echo mf_get_the_motivational();
 }
+
+/**
+ * Returns if nav item is active (bool)
+ */
+
+function mf_is_active($link, $current_url) {
+    // turns $link into regex
+    $urlRegex = '/^'.str_replace('/','\/', $link).'/';
+
+    // checks if $link is in $current_url and if it is not site root
+    $is_active = (preg_match($urlRegex, $current_url) && $link != get_site_url().'/');
+
+    // if $link is root AND $current_url is root then it is active
+    if(($link === get_site_url().'/') && ($current_url === get_site_url().'/')) {
+        $is_active = true;
+    }
+
+    return $is_active;
+}

@@ -4,13 +4,8 @@
     <ul class="o-list-bare site-nav__list">
         <?php $current_url = get_permalink();?>
         <?php foreach(mf_get_nav_items('header') as $item):
-            $urlRegex = '/^'.str_replace('/','\/', $item->link).'/';
-            $is_active = (preg_match($urlRegex, $current_url) && $item->link != get_site_url().'/');
-            if(($item->link === get_site_url().'/') && ($current_url === get_site_url().'/')) {
-                $is_active = true;
-            }
-            ?>
-
+            $is_active = mf_is_active($item->link, $current_url);
+        ?>
         <li class="site-nav__item <?php if($item->children) : ?>site-nav__item_dropdown<?php endif; ?> <?php if($is_active) : ?>active<?php endif; ?>">
             <a class="site-nav__link <?php if($item->children) : ?>site-nav__link_dropdown<?php endif; ?>" href="<?= $item->link ?>"><?= $item->label ?></a>
             <?php if($item->children): ?>
