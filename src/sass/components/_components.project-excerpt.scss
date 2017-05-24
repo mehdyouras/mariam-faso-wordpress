@@ -36,4 +36,12 @@
         //display: flex;
         //align-items: center;
     }
+    &__location {
+        display: block;
+        &::before {
+            font-family: FontAwesome;
+            content: "\f041";
+            margin-right: $inuit-global-spacing-unit-tiny;
+        }
+    }
 }
