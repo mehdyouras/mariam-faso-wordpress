@@ -7,6 +7,14 @@
 <section class="wrapper">
     <header class="section-header section-header_projects">
         <div class="section-header__content-container">
+            <div class="section-header__breadcrumb">
+                <?php
+                if(function_exists('bcn_display'))
+                {
+                    bcn_display();
+                }
+                ?>
+            </div>
             <h2 class="section-header__title">Nos projets</h2>
             <p class="section-header__intro"><?php the_field('projects_intro'); ?></p>
         </div>

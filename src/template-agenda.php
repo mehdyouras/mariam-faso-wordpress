@@ -8,6 +8,14 @@ get_header();
 <section class="wrapper">
     <header class="section-header section-header_actions">
         <div class="section-header__content-container">
+            <div class="section-header__breadcrumb">
+                <?php
+                if(function_exists('bcn_display'))
+                {
+                    bcn_display();
+                }
+                ?>
+            </div>
             <h2 class="section-header__title">Les actions en cours</h2>
             <p class="section-header__intro">Les différentes actions que nous organisons tout au long de l'année nous permette de récolter du materiels, des vètements, des jouets <i>etc</i>. Afin de les redistribuer lors de nos prochains voyages.</p>
         </div>
