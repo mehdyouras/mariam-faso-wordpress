@@ -10,7 +10,7 @@
     justify-content: space-around;
     @include inuit-rem(padding-top, $inuit-global-spacing-unit-small);
     @include inuit-rem(padding-bottom, $inuit-global-spacing-unit-small);
-    @include inuit-rem(margin-bottom, $inuit-global-spacing-unit);
+    //@include inuit-rem(margin-bottom, $inuit-global-spacing-unit);
     @media screen and (max-width: 430px) {
         margin-right:auto;
         margin-left: auto;

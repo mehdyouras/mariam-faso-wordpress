@@ -4,16 +4,15 @@
     flex-wrap: wrap;
     &__item {
         max-width: 30em;
-        max-width: 30em;
         width: 30%;
         margin-bottom: 2*$inuit-global-spacing-unit;
-        @media screen and (max-width: 860px) {
+        @media screen and (max-width: 1150px) {
             width: 45%;
         }
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 850px) {
             width: 85%;
         }
-        @media screen and (max-width: 450px) {
+        @media screen and (max-width: 600px) {
             width: 100%;
         }
     }
