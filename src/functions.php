@@ -305,3 +305,12 @@ function mf_is_active($link, $current_url) {
 
     return $is_active;
 }
+
+function mf_get_datetime($time) {
+    $date = date_create_from_format('d/m/Y', $time);
+    return date_format($date, 'Y-m-d');
+}
+
+function mf_the_datetime($time) {
+    echo mf_get_datetime($time);
+}
