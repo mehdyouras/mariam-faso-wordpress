@@ -3,27 +3,34 @@
     align-items: center;
     flex-direction: column;
     padding: $inuit-global-spacing-unit;
+    @media screen and (min-width: 845px) {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
 }
 
 .project-excerpt {
-    margin-bottom: $inuit-global-spacing-unit;   
+    margin-bottom: $inuit-global-spacing-unit;
+    @media screen and (min-width: 845px) {
+        &:nth-child(n+2) {
+            //margin-left: 2*$inuit-global-spacing-unit;
+        }
+    }
     &__content {
         display: flex;
         align-items: flex-start;
         margin-top: $inuit-global-spacing-unit;
-        @media screen and (max-width: 845px) {
-            flex-direction: column;
-        }
+        flex-direction: column;
     }
     &__thumbnail {
         width: 100%;
         max-width: 30em;
         margin-top: 4px;
         margin-right: $inuit-global-spacing-unit;
-        @media screen and (max-width: 845px) {
-            margin-right: 0;
-            margin-bottom: $inuit-global-spacing-unit;
-        }
+        margin-right: 0;
+        margin-bottom: $inuit-global-spacing-unit;
+
     }
     &__header {
         //display: flex;
