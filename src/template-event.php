@@ -1,5 +1,12 @@
 <?php
-get_headers();
+/*
+        Template Name: Page des évènements
+*/
+?>
+
+
+<?php
+get_header();
 ?>
 
 <section class="wrapper">
