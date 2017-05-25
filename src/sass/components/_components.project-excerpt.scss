@@ -10,12 +10,16 @@
         align-items: stretch;
 
     }
+    @media screen and (min-width: 845px) {
+        justify-content: center;
+    }
 }
 
 .project-excerpt {
-    margin-bottom: $inuit-global-spacing-unit;
+    margin: $inuit-global-spacing-unit 0;
     max-width: 30em;
     @media screen and (min-width: 845px) {
+        margin: $inuit-global-spacing-unit $inuit-global-spacing-unit-small;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -38,13 +42,15 @@
     &__thumbnail {
         //width: 100%;
         margin: auto;
-        max-width: 30em;
-        height:300px;
+        max-width: 100%;
         //margin-top: 4px;
         //margin-right: $inuit-global-spacing-unit;
         //margin-right: 0;
         margin-bottom: $inuit-global-spacing-unit-small;
-
+        @media screen and (min-width: 845px) {
+            height:300px;
+            max-width: 30em;
+        }
     }
     &__header {
         //display: flex;
