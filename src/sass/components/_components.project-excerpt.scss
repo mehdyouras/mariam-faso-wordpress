@@ -3,16 +3,22 @@
     align-items: center;
     flex-direction: column;
     padding: $inuit-global-spacing-unit;
+    flex-wrap: wrap;
     @media screen and (min-width: 845px) {
         flex-direction: row;
         justify-content: space-around;
-        align-items: flex-start;
+        align-items: stretch;
+
     }
 }
 
 .project-excerpt {
     margin-bottom: $inuit-global-spacing-unit;
+    max-width: 30em;
     @media screen and (min-width: 845px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         &:nth-child(n+2) {
             //margin-left: 2*$inuit-global-spacing-unit;
         }
@@ -30,8 +36,10 @@
         flex-direction: column;
     }
     &__thumbnail {
-        width: 100%;
+        //width: 100%;
+        margin: auto;
         max-width: 30em;
+        height:300px;
         //margin-top: 4px;
         //margin-right: $inuit-global-spacing-unit;
         //margin-right: 0;

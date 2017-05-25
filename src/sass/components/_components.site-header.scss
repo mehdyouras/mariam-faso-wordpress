@@ -8,9 +8,7 @@
     margin-left: $inuit-global-spacing-unit-small;
     box-shadow: 0 10px 20px rgba(0,0,0,0.09), 0 3px 6px rgba(0,0,0,0.13);
     justify-content: space-around;
-    @include inuit-rem(padding-top, $inuit-global-spacing-unit-small);
-    @include inuit-rem(padding-bottom, $inuit-global-spacing-unit-small);
-    //@include inuit-rem(margin-bottom, $inuit-global-spacing-unit);
+    padding: $inuit-global-spacing-unit-small 0;
     @media screen and (max-width: 430px) {
         margin-right:auto;
         margin-left: auto;

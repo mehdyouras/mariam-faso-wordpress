@@ -1,10 +1,9 @@
 .section-header {
-    //margin-top: -$inuit-global-spacing-unit;
-    //margin-bottom: $inuit-global-spacing-unit;
     background: url("../img/questions-light-bcg.png");
     padding: $inuit-global-spacing-unit;
     display: flex;
     justify-content: space-around;
+    align-items:center;
     @media screen and (min-width: 1000px) { 
         &_projects::after {
             content: "\f0b1";

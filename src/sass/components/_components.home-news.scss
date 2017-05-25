@@ -88,4 +88,7 @@
         content: "\f061";
         @include inuit-rem(margin-left, $inuit-global-spacing-unit-tiny);
     }
+    &_force-right {
+        margin-left: auto;
+    }
 }
