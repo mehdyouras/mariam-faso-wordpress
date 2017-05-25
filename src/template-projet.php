@@ -41,9 +41,9 @@
                                     <time <?= mf_get_datetime(get_field('project_startdate')); ?>><?php the_field('project_startdate'); ?></time>
                                     <?php if(get_field('project_enddate')) :?>au <time datetime="<?= mf_get_datetime(get_field('project_enddate')); ?>"><?php the_field('project_enddate'); ?></time><?php endif; ?>
                                 </span>
+                                    <?php endif; ?>
                                     <span class="project-excerpt__location"><?php the_field('project_location'); ?></span>
                                 </p>
-                            <?php endif; ?>
 
                         </header>
                         <div class="project-excerpt__content"><img class="project-excerpt__thumbnail" src="<?php the_field('project_thumbnail'); ?>" alt="Photo du projet">
