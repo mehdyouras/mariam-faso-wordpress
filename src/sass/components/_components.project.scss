@@ -15,6 +15,13 @@
     }
 }
 
+.project {
+    @media screen and (min-width: 1120px) {
+        width:1072px;
+        margin: auto;
+    }
+}
+
 .project-excerpt {
     margin: $inuit-global-spacing-unit 0;
     max-width: 30em;
