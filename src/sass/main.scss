@@ -139,7 +139,7 @@ $inuit-global-line-height:  28px;
 @import "components/components.content-wrapper";
 @import "components/components.events";
 @import "components/components.actions";
-
+@import 'components/components.flexible-content';
 // UTILITIES
 @import "utilities/utilities.clearfix";
 $inuit-offsets: true;

@@ -34,8 +34,10 @@ get_header();
             <?php while ( have_rows('projet') ) : the_row(); ?>
 
                 <?php if( get_row_layout() == 'project_text' ): ?>
-                    <div class="wysiwyg">
-                        <?php the_sub_field('project_text_wysiwyg'); ?>
+                    <div class="wysiwyg-block wysiwyg-block">
+                        <div class="wysiwyg">
+                            <?php the_sub_field('project_text_wysiwyg'); ?>
+                        </div>
                     </div>
                 <?php elseif( get_row_layout() == 'project_image_full-width' ):?>
                     <div class="image_full-width">
@@ -51,13 +53,11 @@ get_header();
                         <div class="wysiwyg">
                             <?php the_sub_field('project_text-image_text'); ?>
                         </div>
-                        <figure>
+                        <figure class="text-image__image">
                             <img src="<?php the_sub_field('project_text-image_image'); ?>" alt="">
                             <figcaption><?php the_sub_field('project_text-image_caption'); ?></figcaption>
                         </figure>
                     </div>
-                <?php elseif( get_row_layout() == 'project_text-image' ):?>
-                    
                 <?php endif; ?>
 
             <?php endwhile; ?>

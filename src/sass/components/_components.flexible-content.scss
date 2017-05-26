@@ -1,0 +1,28 @@
+.wysiwyg-block {
+  max-width: inherit;
+  display: flex;
+  justify-content: center;
+  &::after {
+    display: block;
+    content: '';
+    width: 30em;
+    margin: $inuit-global-spacing-unit;
+  }
+
+}
+.wysiwyg {
+  min-width:30em;
+  margin: $inuit-global-spacing-unit;
+}
+
+.text-image {
+  display: flex;
+  justify-content: center;
+  &__image {
+    width: 30em;
+    margin: $inuit-global-spacing-unit;
+  }
+  &_left {
+    flex-direction: row-reverse;
+  }
+}
