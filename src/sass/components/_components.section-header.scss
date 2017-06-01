@@ -43,4 +43,7 @@
         margin-bottom: $inuit-global-spacing-unit;
         font-size: 0.9em;
     }
+    &__content-container {
+        min-width: 30em;
+    }
 }
