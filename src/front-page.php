@@ -19,7 +19,7 @@
     </div>
     <section class="home-events">
         <h3 aria-hidden="true">Nos évènements</h3>
-        <div class="home-full-image-block home-events__featured"><a class="cta cta_centered-middled cta_over-image" href="actions.html">Action en cours à la une</a></div>
+        <div class="home-full-image-block home-events__featured"><a class="cta cta_centered-middled cta_over-image" href="<?php the_field('action_link'); ?>"><?php the_field('action_name'); ?></a></div>
         <ol class="home-events__nexts o-list-bare">
             <li class="home-events__nexts-container">
                 <a class="home-events__nexts-link" href="#">
@@ -42,7 +42,7 @@
                 </p>
             </li>
 
-            <li class="home-events__cta-container"><a class="cta cta_dark" href="agenda.html">Découvrir tous nos évènements</a></li>
+            <li class="home-events__cta-container"><a class="cta cta_dark" href="<?php mf_the_permalink_by_title("agenda") ?>">Découvrir tous nos évènements</a></li>
         </ol>
     </section>
     <section class="home-full-image-block home-gallery">
