@@ -11,7 +11,7 @@
         </section>
         <section class="home-questions__item home-questions__item_bcg-light">
             <div class="home-questions__content-wrapper_right">
-                <h3 class="questions__title questions__title_dark">Notre but</h3>
+                <h3 class="questions__title questions__title_dark">Nos objectifs</h3>
                 <p class="questions__content"><?php the_field('home_help_us') ?></p>
                 <a class="cta cta_dark" href="#">Faire un don</a>
             </div>
