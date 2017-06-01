@@ -30,9 +30,19 @@
         <section class="footer__item footer-project">
             <h3><a class="footer-project__contact-link cta cta_no-border cta_title" href="#">Nos derniers projets</a></h3>
             <ol class="o-list-bare">
-                <li><a class="footer-project__link" href="#">Projet 1</a></li>
-                <li><a class="footer-project__link" href="#">Projet 2</a></li>
-                <li><a class="footer-project__link" href="#">Projet 3</a></li>
+
+                <?php
+                $args = array( 'post_type' => 'project',
+                    'posts_per_page' => 3,
+                    'meta_key'			=> 'project_startdate',
+                    'orderby'			=> 'meta_value',
+                    'order'				=> 'DESC'
+                );
+                $loop = new WP_Query( $args );
+                while ( $loop->have_posts() ) : $loop->the_post(); ?>
+
+                <li><a class="footer-project__link" href="<?php the_permalink(); ?>"><?php the_field('project_name') ?></a></li>
+                <?php endwhile; ?>
             </ol>
             <a href="#" class="cta">Participer</a>
         </section>
