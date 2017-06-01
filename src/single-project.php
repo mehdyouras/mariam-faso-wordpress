@@ -17,51 +17,22 @@ get_header();
             <?php while (have_posts()) : the_post(); ?>
             <h2 class="section-header__title"><?php the_title(); ?></h2>
             <?php if(get_field('project_startdate')) :?>
-            <p class="project-excerpt__info section-header__intro">
-                <span class="project-excerpt__date">
+            <p class="post-excerpt__info section-header__intro">
+                <span class="post-excerpt__date">
                     <time <?= mf_get_datetime(get_field('project_startdate')); ?>><?php the_field('project_startdate'); ?></time>
                     <?php if(get_field('project_enddate')) :?>au <time datetime="<?= mf_get_datetime(get_field('project_enddate')); ?>"><?php the_field('project_enddate'); ?></time><?php endif; ?>
                 </span>
             <?php endif; ?>
-                <span class="project-excerpt__location"><?php the_field('project_location'); ?></span>
+                <span class="post-excerpt__location"><?php the_field('project_location'); ?></span>
             </p>
 
         </div>
     </header>
-    <section class="project content-wrapper">
+    <section class="post content-wrapper">
         <?php
-        if( have_rows('projet') ): ?>
-            <?php while ( have_rows('projet') ) : the_row(); ?>
-
-                <?php if( get_row_layout() == 'project_text' ): ?>
-                    <div class="wysiwyg-block wysiwyg-block">
-                        <div class="wysiwyg">
-                            <?php the_sub_field('project_text_wysiwyg'); ?>
-                        </div>
-                    </div>
-
-                <?php elseif( get_row_layout() == 'project_image_full-width' ):?>
-                    <div class="image_full-width">
-                        <figure>
-                            <img src="<?php the_sub_field('project_image_image'); ?>" alt="">
-                            <figcaption class="figure__caption">
-                                <?php the_sub_field('project_image_caption'); ?>
-                            </figcaption>
-                        </figure>
-                    </div>
-
-                <?php elseif( get_row_layout() == 'project_text-image' ):?>
-                    <div class="text-image text-image<?php the_sub_field('project_text-image_leftright') ?>">
-                        <div class="wysiwyg">
-                            <?php the_sub_field('project_text-image_text'); ?>
-                        </div>
-                        <figure class="text-image__figure">
-                            <img class="figure__image" src="<?php the_sub_field('project_text-image_image'); ?>" alt="">
-                            <figcaption class="figure__caption"><?php the_sub_field('project_text-image_caption'); ?></figcaption>
-                        </figure>
-                    </div>
-                <?php endif; ?>
-
+        if( have_rows('flexible_project') ): ?>
+            <?php while ( have_rows('flexible_project') ) : the_row(); ?>
+                <?php get_template_part('part', 'flexible-content');?>
             <?php endwhile; ?>
 
         <?php endif; ?>

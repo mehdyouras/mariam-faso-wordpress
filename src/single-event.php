@@ -3,7 +3,7 @@ get_header();
 ?>
 
 <section class="wrapper">
-    <header class="section-header section-header_events">
+    <header class="section-header section-header_projects">
         <div class="section-header__content-container">
             <div class="section-header__breadcrumb">
                 <?php
@@ -13,32 +13,29 @@ get_header();
                 }
                 ?>
             </div>
-            <h2 class="section-header__title">Les évènements</h2>
-            <p class="section-header__intro">Les différents evenements que nous organisons chaque année nous permette d'atteindre nos objectis financier ainsi que de faire connaitre nos missions et notre ASBL en général.</p>
+            <?php if (have_posts()) : ?>
+            <?php while (have_posts()) : the_post(); ?>
+            <h2 class="section-header__title"><?php the_title(); ?></h2>
+            <?php if(get_field('event_date')) :?>
+            <p class="post-excerpt__info section-header__intro">
+                <span class="post-excerpt__date">
+                    <time <?= mf_get_datetime(get_field('event_date')); ?>><?php the_field('event_date'); ?></time>
+                </span>
+                <?php endif; ?>
+                <span class="post-excerpt__location"><?php the_field('event_location'); ?></span>
+            </p>
+
         </div>
     </header>
-    <section class="events content-wrapper">
-        <article class="events__item">
-            <header class="events__header">
-                <h3 class="events__title">Souper annuel</h3>
-                <time class="events_date">Samedi 8 juillet à 18h</time>
-            </header><img class="events_thumbnail" src="img/article1.jpg" alt="Illustration de l'event'">
-            <p class="events_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia est, asperiores autem cumque perspiciatis voluptatem dolores, laboriosam nobis dolorem blanditiis provident architecto reprehenderit dolorum? Magnam, unde, corporis. Rerum, illum qui?</p><a class="read-more" href="#">En savoir plus</a>
-        </article>
-        <article class="events__item">
-            <header class="events__header">
-                <h3 class="events__title">Souper annuel</h3>
-                <time class="events_date">Samedi 8 juillet à 18h</time>
-            </header><img class="events_thumbnail" src="img/article1.jpg" alt="Illustration de l'event'">
-            <p class="events_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia est, asperiores autem cumque perspiciatis voluptatem dolores, laboriosam nobis dolorem blanditiis provident architecto reprehenderit dolorum? Magnam, unde, corporis. Rerum, illum qui?</p><a class="read-more" href="#">En savoir plus</a>
-        </article>
-        <article class="events__item">
-            <header class="events__header">
-                <h3 class="events__title">Souper annuel</h3>
-                <time class="events_date">Samedi 8 juillet à 18h</time>
-            </header><img class="events_thumbnail" src="img/article1.jpg" alt="Illustration de l'event'">
-            <p class="events_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia est, asperiores autem cumque perspiciatis voluptatem dolores, laboriosam nobis dolorem blanditiis provident architecto reprehenderit dolorum? Magnam, unde, corporis. Rerum, illum qui?</p><a class="read-more" href="#">En savoir plus</a>
-        </article>
-    </section>
+    <section class="post content-wrapper">
+        <?php
+        if( have_rows('flexible_event') ): ?>
+            <?php while ( have_rows('flexible_event') ) : the_row(); ?>
+                <?php get_template_part('part', 'flexible-content');?>
+            <?php endwhile; ?>
 
+        <?php endif; ?>
+    </section>
+    <?php endwhile; ?>
+    <?php endif; ?>
     <?php get_footer(); ?>
