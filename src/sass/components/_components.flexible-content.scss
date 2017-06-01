@@ -42,6 +42,7 @@
 
 .figure {
   &__image {
+    margin-top: inuit-rem(8px);
     margin-bottom: $inuit-global-spacing-unit-small;
   }
   &__caption {
