@@ -21,7 +21,7 @@
             <a class="cta cta_dark cta_no-border">Participer</a>
         </div>
     </header>
-    <div class="projects content-wrapper">
+    <div class="excerpt-container content-wrapper">
     <?php
         $args = array( 'post_type' => 'project',
             'posts_per_page' => -1,
@@ -31,24 +31,25 @@
             );
         $loop = new WP_Query( $args );
         while ( $loop->have_posts() ) : $loop->the_post(); ?>
-                <article class="project-excerpt">
-                    <div class="project-excerpt__content-wrapper">
-                        <header class="project-excerpt__header">
-                            <h3 class="project-excerpt__title"><a class="project-excerpt__link" href="<?php the_permalink(); ?>"><?php the_field('project_name'); ?></a></h3>
+                <article class="post-excerpt">
+                    <div class="post-excerpt__content-wrapper">
+                        <header class="post-excerpt__header">
+                            <h3 class="post-excerpt__title"><a class="post-excerpt__link" href="<?php the_permalink(); ?>"><?php the_field('project_name'); ?></a></h3>
                             <?php if(get_field('project_startdate')) :?>
-                                <p class="project-excerpt__info">
-                                <span class="project-excerpt__date">
+                                <p class="post-excerpt__info">
+                                <span class="post-excerpt__date">
                                     <time <?= mf_get_datetime(get_field('project_startdate')); ?>><?php the_field('project_startdate'); ?></time>
                                     <?php if(get_field('project_enddate')) :?>au <time datetime="<?= mf_get_datetime(get_field('project_enddate')); ?>"><?php the_field('project_enddate'); ?></time><?php endif; ?>
                                 </span>
                                     <?php endif; ?>
-                                    <span class="project-excerpt__location"><?php the_field('project_location'); ?></span>
+                                    <span class="post-excerpt__location"><?php the_field('project_location'); ?></span>
                                 </p>
 
                         </header>
-                        <div class="project-excerpt__content"><img class="project-excerpt__thumbnail" src="<?php the_field('project_thumbnail'); ?>" alt="Photo du projet">
-                            <div class="project-excerpt__descriptions-container">
-                                <p class="project-excerpt__description"><?php the_field('project_excerpt'); ?></p>
+                        <div class="post-excerpt__content">
+                            <img class="post-excerpt__thumbnail" src="<?php the_field('project_thumbnail'); ?>" alt="Photo du projet">
+                            <div class="post-excerpt__descriptions-container">
+                                <p class="post-excerpt__description"><?php the_field('project_excerpt'); ?></p>
                             </div>
                         </div>
                     </div>

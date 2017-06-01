@@ -24,28 +24,33 @@ get_header();
             <p class="section-header__intro">Les différents evenements que nous organisons chaque année nous permette d'atteindre nos objectis financier ainsi que de faire connaitre nos missions et notre ASBL en général.</p>
         </div>
     </header>
-    <section class="events content-wrapper">
-        <article class="events__item">
-            <header class="events__header">
-                <h3 class="events__title">Souper annuel</h3>
-                <time class="events_date">Samedi 8 juillet à 18h</time>
-            </header><img class="events_thumbnail" src="img/article1.jpg" alt="Illustration de l'event'">
-            <p class="events_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia est, asperiores autem cumque perspiciatis voluptatem dolores, laboriosam nobis dolorem blanditiis provident architecto reprehenderit dolorum? Magnam, unde, corporis. Rerum, illum qui?</p><a class="read-more" href="#">En savoir plus</a>
+    <section class="excerpt-container content-wrapper">
+        <?php
+        $args = array( 'post_type' => 'event',
+            'posts_per_page' => 3,
+            'meta_key'			=> 'event_date',
+            'orderby'			=> 'meta_value',
+            'order'				=> 'DESC'
+        );
+        $loop = new WP_Query( $args );
+        while ( $loop->have_posts() ) : $loop->the_post(); ?>
+        <article class="post-excerpt">
+            <header class="post-excerpt__header">
+                <h3 class="post-excerpt__title"><a class="post-excerpt__link" href="<?php the_permalink(); ?>"><?php the_field('event_title'); ?></a></h3>
+                <p class="post-excerpt__info">
+                    <span class="post-excerpt__date">
+                        <time><?php the_field('event_date'); ?></time>
+                    </span>
+                    <span class="post-excerpt__location"><?php the_field('event_location'); ?></span>
+                </p>
+            </header>
+            <div class="post-excerpt__content">
+                <img class="post-excerpt__thumbnail" src="<?php the_field('event_thumbnail'); ?>" alt="Illustration de l'event'">
+                <p class="post-excerpt__description"><?php the_field('event_excerpt'); ?></p>
+            </div>
+            <a class="read-more read-more_force-right" href="<?php the_permalink(); ?>">En savoir plus</a>
         </article>
-        <article class="events__item">
-            <header class="events__header">
-                <h3 class="events__title">Souper annuel</h3>
-                <time class="events_date">Samedi 8 juillet à 18h</time>
-            </header><img class="events_thumbnail" src="img/article1.jpg" alt="Illustration de l'event'">
-            <p class="events_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia est, asperiores autem cumque perspiciatis voluptatem dolores, laboriosam nobis dolorem blanditiis provident architecto reprehenderit dolorum? Magnam, unde, corporis. Rerum, illum qui?</p><a class="read-more" href="#">En savoir plus</a>
-        </article>
-        <article class="events__item">
-            <header class="events__header">
-                <h3 class="events__title">Souper annuel</h3>
-                <time class="events_date">Samedi 8 juillet à 18h</time>
-            </header><img class="events_thumbnail" src="img/article1.jpg" alt="Illustration de l'event'">
-            <p class="events_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia est, asperiores autem cumque perspiciatis voluptatem dolores, laboriosam nobis dolorem blanditiis provident architecto reprehenderit dolorum? Magnam, unde, corporis. Rerum, illum qui?</p><a class="read-more" href="#">En savoir plus</a>
-        </article>
+        <?php endwhile; ?>
     </section>
 
 <?php get_footer(); ?>
