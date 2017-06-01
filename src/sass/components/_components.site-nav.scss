@@ -150,6 +150,7 @@
                     width: 10em;
                     background: white;
                     height: inherit;
+                    text-indent: 0px;
                     @media screen and (max-width: 1320px) {
                         padding-bottom: 0;
                         background: none;
@@ -176,7 +177,7 @@
         }
     }
     &__dropdown {
-        transition: 0.2s;
+        transition: 0.1s;
         display: block;
         margin-top: inuit-rem(119px);
         //margin-left: -28px;
@@ -184,8 +185,10 @@
         //height: 0;
         position: absolute;
         //transition: 0.2s;
-        width: 10em;
-        height: 0;
+        width: 0em;
+        
+        overflow: hidden;
+        //text-indent: -999999px;
         @media screen and (max-width: 1320px) {
             margin:0;
             //margin-top: inuit-rem(91px);
