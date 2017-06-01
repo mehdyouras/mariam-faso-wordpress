@@ -6,7 +6,7 @@ get_header();
 ?>
 
 <section class="wrapper">
-    <header class="section-header section-header_events">
+    <header class="section-header section-header_aboutus">
         <div class="section-header__content-container">
             <div class="section-header__breadcrumb">
                 <?php
@@ -17,8 +17,16 @@ get_header();
                 ?>
             </div>
             <h2 class="section-header__title">À propos de Mariam-Faso</h2>
-            <p class="section-header__intro">Les différents evenements que nous organisons chaque année nous permette d'atteindre nos objectis financier ainsi que de faire connaitre nos missions et notre ASBL en général.</p>
+            <p class="section-header__intro"><?php the_field("aboutus_intro") ?></p>
         </div>
     </header>
+    <section class="post content-wrapper">
+        <?php
+        if( have_rows('flexible_aboutus') ): ?>
+            <?php while ( have_rows('flexible_aboutus') ) : the_row(); ?>
+                <?php get_template_part('part', 'flexible-content');?>
+            <?php endwhile; ?>
 
+        <?php endif; ?>
+    </section>
     <?php get_footer(); ?>
