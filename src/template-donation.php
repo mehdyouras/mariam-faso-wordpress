@@ -41,7 +41,7 @@ get_header();
                 <dt class="donation-iban__term">Communication structurée&nbsp;:</dt>
                 <dd class="donation-iban__definition donation-iban__definition_full-color"><?php the_field('com_frb', 'option');?></dd>
             </dl>
-            <a class="cta cta_dark" href="<?php the_field('donation_frb'); ?>">Réaliser un don el ligne</a>
+            <a class="cta cta_dark" href="<?php the_field('donation_frb'); ?>">Réaliser un don en ligne</a>
         </section>
     </section>
 
