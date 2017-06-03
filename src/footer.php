@@ -20,11 +20,11 @@
         </section>
         <section class="footer__item footer-donation">
             <h3><a class="footer-donation__donation-link cta cta_no-border cta_title" href="#">Faire un don</a></h3>
-            <dl class="footer-donation__list">
-                <dt class="footer-donation__dt">Numéro de compte&nbsp;:</dt>
-                <dd class="footer-donation__dd"><?php the_field('iban_frb', 'option');?></dd>
-                <dt class="footer-donation__dt">Communication structurée&nbsp;:</dt>
-                <dd class="footer-donation__dd"><?php the_field('com_frb', 'option');?></dd>
+            <dl class="donation-iban__list">
+                <dt class="donation-iban__term">Numéro de compte&nbsp;:</dt>
+                <dd class="donation-iban__definition"><?php the_field('iban_frb', 'option');?></dd>
+                <dt class="donation-iban__term">Communication structurée&nbsp;:</dt>
+                <dd class="donation-iban__definition"><?php the_field('com_frb', 'option');?></dd>
             </dl>
         </section>
         <section class="footer__item footer-project">

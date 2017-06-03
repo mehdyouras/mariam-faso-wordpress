@@ -73,20 +73,7 @@
             }
         }
     }
-    &-donation {
-        &__dt {
-            &:nth-child(n+2) {
-                margin-top: $inuit-global-spacing-unit;
-            }
-        }
-        &__dd {
-            color: #b9b9b9;
-            margin-left: 0;
-        }
-        &__list {
-            margin-bottom: 0;
-        }
-    }
+
     &-project {
         &__link {
             color: white;

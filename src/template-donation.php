@@ -24,24 +24,24 @@ get_header();
 
         </div>
     </header>
-    <section class="post content-wrapper">
+    <section class="post post_donation content-wrapper">
         <h2 class="u-hidden-visually">Réaliser un don</h2>
-        <section>
+        <section class="donation__column">
             <h3>Les avantages fiscaux d'une donation</h3>
             <div class="wysiwyg">
                 <?php the_field('donation_fisc') ?>
             </div>
-            <a href="<?php the_field('donation_spf') ?>" class="cta cta_dark">En savoir plus sur les avantages fiscaux liés aux donations</a>
+            <a href="<?php the_field('donation_spf') ?>" class="cta cta_dark">En savoir plus sur les avantages fiscaux</a>
         </section>
-        <section>
+        <section class="donation__column">
             <h3>Réaliser un don via la Fondation Roi Baudouin</h3>
-            <dl class="footer-donation__list">
-                <dt class="footer-donation__dt">Numéro de compte&nbsp;:</dt>
-                <dd class="footer-donation__dd"><?php the_field('iban_frb', 'option');?></dd>
-                <dt class="footer-donation__dt">Communication structurée&nbsp;:</dt>
-                <dd class="footer-donation__dd"><?php the_field('com_frb', 'option');?></dd>
+            <dl class="donation-iban__list">
+                <dt class="donation-iban__term">Numéro de compte&nbsp;:</dt>
+                <dd class="donation-iban__definition donation-iban__definition_full-color"><?php the_field('iban_frb', 'option');?></dd>
+                <dt class="donation-iban__term">Communication structurée&nbsp;:</dt>
+                <dd class="donation-iban__definition donation-iban__definition_full-color"><?php the_field('com_frb', 'option');?></dd>
             </dl>
-            <a class="cta cta_dark" href="<?php the_field('donation_frb'); ?>">Réaliser un don à Mariam Faso via la Fondation Roi Baudouin</a>
+            <a class="cta cta_dark" href="<?php the_field('donation_frb'); ?>">Réaliser un don el ligne</a>
         </section>
     </section>
 

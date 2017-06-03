@@ -44,6 +44,9 @@
             font-size: 12.5rem;
             line-height: 1.08;
             margin-left: .2em;
+            @media screen and (min-width: 2000px) {
+                margin: 0 $inuit-global-spacing-unit;
+            }
         }
         &_participate::after {
             content: "\f2b5";
@@ -57,6 +60,9 @@
     @media screen and (min-width: 1320px) {
         margin-top: 0;
     }
+    @media screen and (min-width: 2000px) {
+        justify-content: center;
+    }
     &__intro {
         max-width: 30em;
         padding: $inuit-global-spacing-unit;
@@ -68,6 +74,9 @@
         font-size: 0.9em;
     }
     &__content-container {
-        //min-width: 30em;
+        @media screen and (min-width: 2000px) {
+            margin: 0 $inuit-global-spacing-unit;
+        }
+            //min-width: 30em;
     }
 }

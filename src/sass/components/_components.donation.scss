@@ -1,0 +1,30 @@
+.donation {
+  &__column {
+    margin: $inuit-global-spacing-unit 0;
+    max-width: 30em;
+    @media screen and (min-width: 1120px) {
+      margin: 0 $inuit-global-spacing-unit;
+    }
+  }
+}
+
+.donation-iban {
+  &__term {
+    &:nth-child(n+2) {
+      margin-top: $inuit-global-spacing-unit;
+    }
+  }
+  &__definition {
+    color: #b9b9b9;
+    margin-left: 0;
+    &_full-color {
+      color: black;
+      &:last-of-type {
+        margin-bottom: $inuit-global-spacing-unit;
+      }
+    }
+  }
+  &__list {
+    margin-bottom: 0;
+  }
+}

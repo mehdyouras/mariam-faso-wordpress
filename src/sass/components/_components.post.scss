@@ -3,6 +3,16 @@
     width:1072px;
     margin: auto;
   }
+  &_donation {
+    margin: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    @media screen and (min-width: 1120px) {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  }
 }
 
 
@@ -10,7 +20,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: $inuit-global-spacing-unit;
+  //padding: $inuit-global-spacing-unit;
   flex-wrap: wrap;
   @media screen and (min-width: 845px) {
     flex-direction: row;
