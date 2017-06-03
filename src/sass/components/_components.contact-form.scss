@@ -1,0 +1,22 @@
+.screen-reader-response {
+  @include inuit-hidden-visually;
+}
+
+.one-border-input {
+  border: 0;
+  border-bottom: solid 2px $mf-orange;
+}
+
+[role="alert"] {
+  color: #ee3432;
+  display: block;
+}
+
+[aria-invalid="true"] {
+  border-color: #ee3432;
+}
+
+.wpcf7-submit {
+  background: 0;
+}
+
