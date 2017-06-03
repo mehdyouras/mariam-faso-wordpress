@@ -13,10 +13,12 @@
 
 }
 .wysiwyg {
-  width:30em;
-  margin: 0 $inuit-global-spacing-unit;
+  max-width:30em;
   strong {
     font-weight: bold;
+  }
+  &_margin {
+    margin: 0 $inuit-global-spacing-unit;
   }
 }
 

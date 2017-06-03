@@ -1,6 +1,6 @@
 <?php if( get_row_layout() == 'flexible_text' ): ?>
     <div class="wysiwyg-block wysiwyg-block">
-        <div class="wysiwyg">
+        <div class="wysiwyg_margin">
             <?php the_sub_field('flexible_text_wysiwyg'); ?>
         </div>
     </div>
@@ -17,7 +17,7 @@
 
 <?php elseif( get_row_layout() == 'flexible_text-image' ):?>
     <div class="text-image text-image<?php the_sub_field('flexible_text-image_leftright') ?>">
-        <div class="wysiwyg">
+        <div class="wysiwyg_margin">
             <?php the_sub_field('flexible_text-image_text'); ?>
         </div>
         <figure class="text-image__figure">
