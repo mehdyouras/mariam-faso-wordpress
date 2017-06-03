@@ -45,7 +45,7 @@
             line-height: 1.08;
             margin-left: .2em;
         }
-        &_participte::after {
+        &_participate::after {
             content: "\f2b5";
             font-family: fontAwesome;
             font-size: 200px;
@@ -68,6 +68,6 @@
         font-size: 0.9em;
     }
     &__content-container {
-        min-width: 30em;
+        //min-width: 30em;
     }
 }
