@@ -17,8 +17,8 @@
             </div>
             <h2 class="section-header__title">Nos projets</h2>
             <p class="section-header__intro"><?php the_field('projects_intro'); ?></p>
-            <a class="cta cta_dark cta_no-border">Faire un don</a>
-            <a class="cta cta_dark cta_no-border">Participer</a>
+            <a class="cta cta_dark cta_no-border" href="<?php mf_the_permalink_by_title("faire un don") ?>">Faire un don</a>
+            <a class="cta cta_dark cta_no-border" href="<?php mf_the_permalink_by_title("participer") ?>">Participer</a>
         </div>
     </header>
     <div class="excerpt-container content-wrapper">

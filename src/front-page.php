@@ -13,7 +13,7 @@
             <div class="home-questions__content-wrapper_right">
                 <h3 class="questions__title questions__title_dark">Nos objectifs</h3>
                 <p class="questions__content"><?php the_field('home_help_us') ?></p>
-                <a class="cta cta_dark" href="#">Faire un don</a>
+                <a class="cta cta_dark" href="<?php mf_the_permalink_by_title("faire un don") ?>">Faire un don</a>
             </div>
         </section>
     </div>

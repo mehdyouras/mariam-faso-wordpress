@@ -19,7 +19,7 @@
             <?php endif; ?>
         </section>
         <section class="footer__item footer-donation">
-            <h3><a class="footer-donation__donation-link cta cta_no-border cta_title" href="#">Faire un don</a></h3>
+            <h3><a class="footer-donation__donation-link cta cta_no-border cta_title" href="<?php mf_the_permalink_by_title("faire un don") ?>">Faire un don</a></h3>
             <dl class="donation-iban__list">
                 <dt class="donation-iban__term">Numéro de compte&nbsp;:</dt>
                 <dd class="donation-iban__definition"><?php the_field('iban_frb', 'option');?></dd>
@@ -28,7 +28,7 @@
             </dl>
         </section>
         <section class="footer__item footer-project">
-            <h3><a class="footer-project__contact-link cta cta_no-border cta_title" href="#">Nos derniers projets</a></h3>
+            <h3><a class="footer-project__contact-link cta cta_no-border cta_title" href="<?php mf_the_permalink_by_title("projets") ?>">Nos derniers projets</a></h3>
             <ol class="o-list-bare">
 
                 <?php

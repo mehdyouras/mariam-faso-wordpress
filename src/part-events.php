@@ -10,6 +10,8 @@
         </div>
         <h2 class="section-header__title">Les évènements</h2>
         <p class="section-header__intro">Les différents evenements que nous organisons chaque année nous permette d'atteindre nos objectis financier ainsi que de faire connaitre nos missions et notre ASBL en général.</p>
+        <a class="cta cta_dark cta_no-border" href="<?php mf_the_permalink_by_title("faire un don") ?>">Faire un don</a>
+        <a class="cta cta_dark cta_no-border" href="<?php mf_the_permalink_by_title("participer") ?>">Participer</a>
     </div>
 </header>
 <section class="excerpt-container content-wrapper">
