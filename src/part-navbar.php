@@ -18,10 +18,10 @@
             <?php endif; ?>
         <?php endforeach; ?>
         <li class="site-nav__item">
-            <a class="cta cta_dark cta_no-border" href="#">Faire un don</a>
+            <a class="cta cta_dark cta_no-border" href="<?php mf_the_permalink_by_title("faire un don") ?>">Faire un don</a>
         </li>
         <li class="site-nav__item">
-            <a class="site-nav__item cta cta_dark cta_no-border" href="#">Participer</a>
+            <a class="site-nav__item cta cta_dark cta_no-border" href="<?php mf_the_permalink_by_title("participer") ?>">Participer</a>
         </li>
     </ul>
 </nav>
