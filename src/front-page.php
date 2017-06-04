@@ -6,7 +6,7 @@
             <div class="home-questions__content-wrapper_left">
                 <h3 class="home-questions__title">Qui sommes nous ?</h3>
                 <p class="home-questions__content"><?php the_field('home_about_us') ?></p>
-                <a class="cta" href="#">En savoir plus</a>
+                <a class="cta" href="<?php mf_the_permalink_by_title("a propos") ?>">En savoir plus</a>
             </div>
         </section>
         <section class="home-questions__item home-questions__item_bcg-light">
