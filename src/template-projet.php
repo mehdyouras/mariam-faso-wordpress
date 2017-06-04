@@ -15,10 +15,10 @@
                 }
                 ?>
             </div>
-            <h2 class="section-header__title">Nos projets</h2>
+            <h2 class="section-header__title"><?= __('Nos projets','mf');?></h2>
             <p class="section-header__intro"><?php the_field('projects_intro'); ?></p>
-            <a class="cta cta_dark cta_no-border" href="<?php mf_the_permalink_by_title("faire un don") ?>">Faire un don</a>
-            <a class="cta cta_dark cta_no-border" href="<?php mf_the_permalink_by_title("participer") ?>">Participer</a>
+            <a class="cta cta_dark cta_no-border" href="<?php mf_the_permalink_by_title("faire un don") ?>"><?= __('Faire un don','mf');?></a>
+            <a class="cta cta_dark cta_no-border" href="<?php mf_the_permalink_by_title("participer") ?>"><?= __('Participer','mf');?></a>
         </div>
     </header>
     <div class="excerpt-container content-wrapper">
@@ -39,7 +39,7 @@
                                 <p class="post-excerpt__info">
                                 <span class="post-excerpt__date">
                                     <time datetime="<?= mf_get_datetime(get_field('project_startdate')); ?>"><?php the_field('project_startdate'); ?></time>
-                                    <?php if(get_field('project_enddate')) :?>au <time datetime="<?= mf_get_datetime(get_field('project_enddate')); ?>"><?php the_field('project_enddate'); ?></time><?php endif; ?>
+                                    <?php if(get_field('project_enddate')) :?><?= __('au','mf');?> <time datetime="<?= mf_get_datetime(get_field('project_enddate')); ?>"><?php the_field('project_enddate'); ?></time><?php endif; ?>
                                 </span>
                                     <?php endif; ?>
                                     <span class="post-excerpt__location"><?php the_field('project_location'); ?></span>
@@ -53,7 +53,7 @@
                             </div>
                         </div>
                     </div>
-                    <a class="cta cta_dark cta_no-border cta_force-right" href="<?php the_permalink(); ?>">En savoir plus</a>
+                    <a class="cta cta_dark cta_no-border cta_force-right" href="<?php the_permalink(); ?>"><?= __('En savoir plus','mf');?></a>
                 </article>
         <?php endwhile; ?>
     </div>

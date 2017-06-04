@@ -13,5 +13,5 @@
             <p class="post__description"><?php the_field('post_excerpt'); ?></p>
         </div>
     </div>
-    <a class="cta cta_dark cta_no-border cta_force-right" href="<?php the_permalink(); ?>">Lire plus</a>
+    <a class="cta cta_dark cta_no-border cta_force-right" href="<?php the_permalink(); ?>"><?= __('Lire plus','mf');?></a>
 </article>

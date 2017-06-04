@@ -15,8 +15,8 @@
         </div>
         <h2 class="section-header__title"><?= __('Les actions en cours','mf');?></h2>
         <p class="section-header__intro"><?php the_field('actions_intro', $actions); ?></p>
-        <a class="cta cta_dark cta_no-border" href="<?php mf_the_permalink_by_title("projets") ?>">Nos projets</a>
-        <a class="cta cta_dark cta_no-border" href="<?php mf_the_permalink_by_title("participer") ?>">Participer</a>
+        <a class="cta cta_dark cta_no-border" href="<?php mf_the_permalink_by_title("projets") ?>"><?= __('Nos projets','mf');?></a>
+        <a class="cta cta_dark cta_no-border" href="<?php mf_the_permalink_by_title("participer") ?>"><?= __('Participer','mf');?></a>
     </div>
 </header>
 <section class="excerpt-container content-wrapper">
@@ -35,7 +35,7 @@
                 <h3 class="post-excerpt__title"><?php the_title(); ?></h3>
                 <p class="post-excerpt__info">
                     <span class="post-excerpt__date">
-                        Du <time datetime="<?php mf_the_datetime(get_field('action_startdate')); ?>" class="actions__time"><?php the_field('action_startdate') ?></time> au <time datetime="<?php mf_the_datetime(get_field('action_enddate')); ?>" class="actions__time"><?php the_field('action_enddate') ?></time>.
+                        <?= __('Du','mf');?> <time datetime="<?php mf_the_datetime(get_field('action_startdate')); ?>" class="actions__time"><?php the_field('action_startdate') ?></time> <?= __('au','mf');?> <time datetime="<?php mf_the_datetime(get_field('action_enddate')); ?>" class="actions__time"><?php the_field('action_enddate') ?></time>.
                     </span>
                     <span class="post-excerpt__location"><?php the_field('action_location') ?></span>
                 </p>

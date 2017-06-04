@@ -16,7 +16,7 @@ get_header();
                 ?>
             </div>
             <h2 class="section-header__title"><?php the_title(); ?></h2>
-            <p class="section-header__intro">Les différentes actions que nous organisons tout au long de l'année nous permette de récolter du materiels, des vètements, des jouets <i>etc</i>. Afin de les redistribuer lors de nos prochains voyages.</p>
+            <p class="section-header__intro"><?php the_field('news_intro'); ?></p>
             <a class="cta cta_dark cta_no-border" href="<?php mf_the_permalink_by_title("projets") ?>">Nos projets</a>
             <a class="cta cta_dark cta_no-border" href="<?php mf_the_permalink_by_title("participer") ?>">Participer</a>
         </div>
