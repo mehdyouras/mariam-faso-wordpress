@@ -1,3 +1,9 @@
+<?php
+$events = get_page_by_title('evenements');
+$events = $events->ID;
+?>
+
+
 <header class="section-header section-header_events">
     <div class="section-header__content-container">
         <div class="section-header__breadcrumb">
@@ -8,10 +14,10 @@
             }
             ?>
         </div>
-        <h2 class="section-header__title">Les évènements</h2>
-        <p class="section-header__intro">Les différents evenements que nous organisons chaque année nous permette d'atteindre nos objectis financier ainsi que de faire connaitre nos missions et notre ASBL en général.</p>
-        <a class="cta cta_dark cta_no-border" href="<?php mf_the_permalink_by_title("faire un don") ?>">Faire un don</a>
-        <a class="cta cta_dark cta_no-border" href="<?php mf_the_permalink_by_title("participer") ?>">Participer</a>
+        <h2 class="section-header__title"><?= __('Les évènements','mf');?></h2>
+        <p class="section-header__intro"><?php the_field('events_intro', $events); ?></p>
+        <a class="cta cta_dark cta_no-border" href="<?php mf_the_permalink_by_title("faire un don") ?>"><?= __('Faire un don','mf');?></a>
+        <a class="cta cta_dark cta_no-border" href="<?php mf_the_permalink_by_title("participer") ?>"><?= __('Participer','mf');?></a>
     </div>
 </header>
 <section class="excerpt-container content-wrapper">
@@ -38,7 +44,7 @@
                 <?php mf_the_image(get_field('event_thumbnail'), "mf_thumbnail", "post-excerpt__thumbnail"); ?>
                 <p class="post-excerpt__description"><?php the_field('event_excerpt'); ?></p>
             </div>
-            <a class="cta cta_dark cta_no-border cta_force-right" href="<?php the_permalink(); ?>">En savoir plus</a>
+            <a class="cta cta_dark cta_no-border cta_force-right" href="<?php the_permalink(); ?>"><?= __('En savoir plus','mf');?></a>
         </article>
     <?php endwhile; ?>
 </section>
