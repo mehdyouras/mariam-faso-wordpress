@@ -38,7 +38,7 @@
                             <?php if(get_field('project_startdate')) :?>
                                 <p class="post-excerpt__info">
                                 <span class="post-excerpt__date">
-                                    <time <?= mf_get_datetime(get_field('project_startdate')); ?>><?php the_field('project_startdate'); ?></time>
+                                    <time datetime="<?= mf_get_datetime(get_field('project_startdate')); ?>"><?php the_field('project_startdate'); ?></time>
                                     <?php if(get_field('project_enddate')) :?>au <time datetime="<?= mf_get_datetime(get_field('project_enddate')); ?>"><?php the_field('project_enddate'); ?></time><?php endif; ?>
                                 </span>
                                     <?php endif; ?>
@@ -47,7 +47,7 @@
 
                         </header>
                         <div class="post-excerpt__content">
-                            <img class="post-excerpt__thumbnail" src="<?php the_field('project_thumbnail'); ?>" alt="Photo du projet">
+                            <?php mf_the_image(get_field('project_thumbnail'), "mf_thumbnail", "post-excerpt__thumbnail"); ?>
                             <div class="post-excerpt__descriptions-container">
                                 <p class="post-excerpt__description"><?php the_field('project_excerpt'); ?></p>
                             </div>
