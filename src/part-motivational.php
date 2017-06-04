@@ -4,5 +4,5 @@
             <span class="home-motivational__item"><?= $line ?></span>
         <?php endforeach; ?>
     </h2>
-    <a class="cta cta_over-image" href="#">Découvrir nos projets</a>
+    <a class="cta cta_over-image" href="<?php mf_the_permalink_by_title("projets") ?>">Découvrir nos projets</a>
 </section>

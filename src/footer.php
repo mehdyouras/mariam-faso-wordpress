@@ -44,7 +44,7 @@
                 <li><a class="footer-project__link" href="<?php the_permalink(); ?>"><?php the_field('project_name') ?></a></li>
                 <?php endwhile; ?>
             </ol>
-            <a href="#" class="cta">Participer</a>
+            <a href="<?php mf_the_permalink_by_title("participer") ?>" class="cta">Participer</a>
         </section>
         <section class="footer__item footer-contact">
             <h3><a class="footer-contact__contact-link cta cta_no-border cta_title" href="<?php mf_the_permalink_by_title("nous contacter") ?>">Nous contacter</a></h3>
