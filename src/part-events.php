@@ -17,7 +17,7 @@
 <section class="excerpt-container content-wrapper">
     <?php
     $args = array( 'post_type' => 'event',
-        'posts_per_page' => 3,
+        'posts_per_page' => -1,
         'meta_key'			=> 'event_date',
         'orderby'			=> 'meta_value',
         'order'				=> 'DESC'
@@ -35,7 +35,7 @@
                 </p>
             </header>
             <div class="post-excerpt__content">
-                <img class="post-excerpt__thumbnail" src="<?php the_field('event_thumbnail'); ?>" alt="Illustration de l'event'">
+                <?php mf_the_image(get_field('event_thumbnail'), "mf_thumbnail", "post-excerpt__thumbnail"); ?>
                 <p class="post-excerpt__description"><?php the_field('event_excerpt'); ?></p>
             </div>
             <a class="cta cta_dark cta_no-border cta_force-right" href="<?php the_permalink(); ?>">En savoir plus</a>
