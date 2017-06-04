@@ -53,7 +53,7 @@
                             </div>
                         </div>
                     </div>
-                    <a class="read-more read-more_force-right" href="<?php the_permalink(); ?>">En savoir plus</a>
+                    <a class="cta cta_dark cta_no-border cta_force-right" href="<?php the_permalink(); ?>">En savoir plus</a>
                 </article>
         <?php endwhile; ?>
     </div>

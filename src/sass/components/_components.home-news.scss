@@ -81,8 +81,10 @@
 }
 
 .read-more {
-    color: #ffa162;
+    color: #000000;
     float: right;
+    font-weight: bold;
+    border-bottom: 2px solid orange;
     &::after {
         font-family: FontAwesome;
         content: "\f061";

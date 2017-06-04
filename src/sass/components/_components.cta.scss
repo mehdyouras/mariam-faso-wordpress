@@ -50,5 +50,8 @@
     &.cta_title::before {
         font-size: 0.6em;
     }
-
+    &_force-right {
+        margin-left: auto;
+        float: right;
+    }
 }

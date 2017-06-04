@@ -38,7 +38,7 @@
                 <img class="post-excerpt__thumbnail" src="<?php the_field('event_thumbnail'); ?>" alt="Illustration de l'event'">
                 <p class="post-excerpt__description"><?php the_field('event_excerpt'); ?></p>
             </div>
-            <a class="read-more read-more_force-right" href="<?php the_permalink(); ?>">En savoir plus</a>
+            <a class="cta cta_dark cta_no-border cta_force-right" href="<?php the_permalink(); ?>">En savoir plus</a>
         </article>
     <?php endwhile; ?>
 </section>
