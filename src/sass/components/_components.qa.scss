@@ -1,0 +1,24 @@
+.qa {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+  &__container {
+    padding: $inuit-global-spacing-unit-small $inuit-global-spacing-unit;
+    border-left: 3px solid $mf-orange;
+    &:nth-child(n+2) {
+      margin-top: 2*$inuit-global-spacing-unit;
+    }
+  }
+  &__question {
+    font-family: "Open Sans", sans-serif;
+    font-size: $inuit-font-size-h3;
+    margin-bottom: $inuit-global-spacing-unit-small;
+    align-items: center;
+
+  }
+  &__answer {
+    margin: 0;
+    max-width: 30em;
+    align-items: center;
+  }
+}
