@@ -3,6 +3,8 @@
 add_action('init', 'mf_create_custom_post_types');
 add_theme_support('post-thumbnails');
 
+add_image_size( 'mf_thumbnail', 480, 320);
+
 // Allow SVG
 add_filter( 'wp_check_filetype_and_ext', function($data, $file, $filename, $mimes) {
 
@@ -335,3 +337,25 @@ function mf_get_permalink_by_title( $title ) {
 function mf_the_permalink_by_title($title) {
     echo mf_get_permalink_by_title($title);
 };
+
+
+// Insert image
+
+function mf_the_image($image, $sizeWanted, $class = '') {
+
+    if( !empty($image) ) {
+    // vars
+        $url = $image['url'];
+        $title = $image['title'];
+        $alt = $image['alt'];
+        $caption = $image['caption'];
+
+    // thumbnail
+        $size = $sizeWanted;
+        $thumb = $image['sizes'][ $size ];
+        $width = $image['sizes'][ $size . '-width' ];
+        $height = $image['sizes'][ $size . '-height' ];
+    }
+    $imageTag = '<img class="' .$class. '" src="'.$thumb. '?>" alt="'.$alt.'" />';
+    echo $imageTag;
+}
