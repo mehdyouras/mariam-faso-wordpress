@@ -52,24 +52,15 @@
     <section class="home-news">
         <h3 class="home-news__title">Notre actualité</h3>
         <div class="home-news__article-container">
-            <article class="home-news__article">
-                <h4 class="article__title"><time class="article__time">12/09</time>Titre de la news</h4>
-                <img class="article__img" src="img/article1.jpg" alt="#">
-                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, reprehenderit praesentium labore aperiam ab ut necessitatibus, quas, culpa eius blanditiis odit. Quae ipsum necessitatibus, iure modi recusandae omnis laudantium. Non.</p>
-                <a class="cta cta_dark cta_no-border cta_force-right">Lire plus</a>
-            </article>
-            <article class="home-news__article">
-                <h4 class="article__title"><time class="article__time">12/09</time>Titre de la news</h4>
-                <img class="article__img" src="img/article1.jpg" alt="#">
-                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, reprehenderit praesentium labore aperiam ab ut necessitatibus, quas, culpa eius blanditiis odit. Quae ipsum necessitatibus, iure modi recusandae omnis laudantium. Non.</p>
-                <a class="cta cta_dark cta_no-border cta_force-right">Lire plus</a>
-            </article>
-            <article class="home-news__article">
-                <h4 class="article__title"><time class="article__time">12/09</time>Titre de la news</h4>
-                <img class="article__img" src="img/article1.jpg" alt="#">
-                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, reprehenderit praesentium labore aperiam ab ut necessitatibus, quas, culpa eius blanditiis odit. Quae ipsum necessitatibus, iure modi recusandae omnis laudantium. Non.</p>
-                <a class="cta cta_dark cta_no-border cta_force-right">Lire plus</a>
-            </article>
+            <?php
+            $args = array(
+                'post_type' => 'post',
+                'posts_per_page' => 3,);
+
+            $loop = new WP_Query( $args );
+            if ( $loop->have_posts() ) : while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                <?php get_template_part('part', 'news');?>
+            <?php endwhile; endif; ?>
         </div>
     </section>
 <?php get_footer(); ?>
