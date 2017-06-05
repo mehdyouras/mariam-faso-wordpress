@@ -34,9 +34,6 @@
             @media screen and (min-width: 1058px) {
                 flex-direction: row;
                 max-width: 100%;
-                justify-content: space-around;
-            }
-            @media screen and (min-width: 2000px) {
                 justify-content: center;
             }
         }
