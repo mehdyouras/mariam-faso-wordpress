@@ -5,7 +5,7 @@
 get_header();
 ?>
 <section class="wrapper">
-    <header class="section-header section-header_actions">
+    <header class="section-header section-header_post">
         <div class="section-header__content-container">
             <div class="section-header__breadcrumb">
                 <?php
