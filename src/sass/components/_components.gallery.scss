@@ -4,7 +4,36 @@
   margin: $inuit-global-spacing-unit;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   &__title {
     position: absolute;
+  }
+}
+
+.images-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  justify-content: center;
+  align-items: flex-end;
+  &__item {
+    list-style: none;
+    margin: 0 $inuit-global-spacing-unit;
+    max-width: 18em;
+  }
+  &__image {
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+    width:100%;
+    height:100%;
+    transition: 0.2s;
+    &:hover {
+      transform: translateY(-7px);
+    }
+  }
+  figcaption {
+    //border-left: 2px solid $mf-orange;
+    //border-right: 2px solid $mf-orange;
+    border-bottom: 2px solid $mf-orange;
+    //background: $mf-orange  ;
   }
 }
