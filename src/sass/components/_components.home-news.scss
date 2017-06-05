@@ -31,7 +31,7 @@
             align-self: center;
             display: flex;
             flex-direction: column;
-            @media screen and (min-width: 768px) {
+            @media screen and (min-width: 1058px) {
                 flex-direction: row;
                 max-width: 100%;
                 justify-content: space-around;

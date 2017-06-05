@@ -101,4 +101,11 @@
       margin-right: $inuit-global-spacing-unit-tiny;
     }
   }
+  &_home {
+    @media screen and (max-width: 1560px) {
+      &:nth-child(n+3) {
+        display: none;
+      }
+    }
+  }
 }

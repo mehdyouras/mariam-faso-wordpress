@@ -1,4 +1,4 @@
-<article class="post-excerpt">
+<article class="post-excerpt <?php if(is_front_page()) :?>post-excerpt_home<?php endif; ?>">
     <div class="post-excerpt__content-wrapper">
         <header class="post-excerpt__header">
             <h3 class="post-excerpt__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
