@@ -341,7 +341,7 @@ function mf_the_permalink_by_title($title) {
 
 // Insert image
 
-function mf_the_image($image, $sizeWanted, $class = '', $needCaption = 'false') {
+function mf_the_image($image, $sizeWanted, $class = '', $needCaption = false) {
 
     if( !empty($image) ) {
     // vars
