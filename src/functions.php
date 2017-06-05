@@ -152,16 +152,16 @@ function mf_the_excerpt($length=null) {
 }
 
 function mf_create_custom_post_types() {
-    register_post_type('trip',[
-        'label' => 'Voyages',
+    register_post_type('gallery',[
+        'label' => 'Galeries',
         'labels' => [
-            'singular_name' => 'Voyage',
-            'add_new' => 'Ajouter un voyage',
-            'add_new_item' => 'Ajouter un nouveau voyage'
+            'singular_name' => 'Galerie',
+            'add_new' => 'Ajouter une galerie',
+            'add_new_item' => 'Ajouter une nouvelle galerie'
         ],
-        'description' => "Type d'article permettant d'ajouter des voyages à la section voyages du site",
+        'description' => "Type d'article permettant d'ajouter des galeries",
         'menu_position' => "20",
-        'menu_icon' => 'dashicons-palmtree',
+        'menu_icon' => 'dashicons-format-gallery',
         'public' => true,
     ]);
 
