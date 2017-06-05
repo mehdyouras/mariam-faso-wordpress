@@ -3,7 +3,7 @@ get_header();
 ?>
 
 <section class="wrapper">
-    <header class="section-header section-header_projects">
+    <header class="section-header section-header_events">
         <div class="section-header__content-container">
             <div class="section-header__breadcrumb">
                 <?php
