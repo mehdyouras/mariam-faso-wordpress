@@ -30,8 +30,8 @@ get_header();
     </header>
     <section class="post content-wrapper">
         <?php
-        if( have_rows('flexible_project') ): ?>
-            <?php while ( have_rows('flexible_project') ) : the_row(); ?>
+        if( have_rows('flexible') ): ?>
+            <?php while ( have_rows('flexible') ) : the_row(); ?>
                 <?php get_template_part('part', 'flexible-content');?>
             <?php endwhile; ?>
 
