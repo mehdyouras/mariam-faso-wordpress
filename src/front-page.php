@@ -47,7 +47,7 @@
     </section>
     <section class="home-full-image-block home-gallery">
         <h3 aria-hidden="true"><?= __('Galerie','mf');?></h3>
-        <a class="cta cta_over-image cta_centered-middled" href="#"><?= __('Découvrir nos voyages en image','mf');?></a>
+        <a class="cta cta_over-image cta_centered-middled" href="<?php mf_the_permalink_by_title("galeries") ?>"><?= __('Découvrir nos voyages en image','mf');?></a>
     </section>
     <section class="home-news">
         <h3 class="home-news__title"><a href="<?php mf_the_permalink_by_title("actualite") ?>"><?= __('Notre actualité','mf');?></a></h3>
