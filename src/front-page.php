@@ -17,37 +17,14 @@
             </div>
         </section>
     </div>
-    <section class="home-events">
-        <h3 aria-hidden="true"><?= __('Nos événements','mf');?></h3>
-        <div class="home-full-image-block home-events__featured"><a class="cta cta_centered-middled cta_over-image" href="<?php mf_the_permalink_by_title("actions"); ?>"><?= __('Nous aider à collecter du matériel','mf');?></a></div>
-        <ol class="home-events__nexts o-list-bare">
-            <li class="home-events__nexts-container">
-                <a class="home-events__nexts-link" href="#">
-                    <time>22/06</time>
-                    <p class="home-events__nexts-title">Titre de l'event</p>
-                </a>
-                <p class="home-events__nexts-description">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad aliquid, amet asperiores atque.
-                    <a class="cta cta_dark cta_no-border cta_force-right" href="#">En savoir plus</a>
-                </p>
-            </li>
-            <li class="home-events__nexts-container">
-                <a class="home-events__nexts-link" href="#">
-                    <time>22/06</time>
-                    <p class="home-events__nexts-title">Titre de l'event</p>
-                </a>
-                <p class="home-events__nexts-description">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad aliquid, amet asperiores atque.
-                    <a class="cta cta_dark cta_no-border cta_force-right" href="#">En savoir plus</a>
-                </p>
-            </li>
-
-            <li class="home-events__cta-container"><a class="cta cta_dark" href="<?php mf_the_permalink_by_title("évènements") ?>"><?= __('Découvrir tous nos événements','mf');?></a></li>
-        </ol>
-    </section>
-    <section class="home-full-image-block home-gallery">
-        <h3 aria-hidden="true"><?= __('Galerie','mf');?></h3>
-        <a class="cta cta_over-image cta_centered-middled" href="<?php mf_the_permalink_by_title("galeries") ?>"><?= __('Découvrir nos voyages en image','mf');?></a>
+    <section class="col2-images">
+        <h3 class="u-hidden-visually">Nos galeries photos et nos actions</h3>
+        <div class="col2-images__item col2-images__item_actions">
+            <a class="cta cta_centered-middled cta_over-image" href="<?php mf_the_permalink_by_title("actions"); ?>"><?= __('Nous aider à collecter du matériel','mf');?></a>
+        </div>
+        <div class="col2-images__item col2-images__item_gallery">
+            <a class="cta cta_over-image cta_centered-middled" href="<?php mf_the_permalink_by_title("galeries") ?>"><?= __('Découvrir nos voyages en image','mf');?></a>
+        </div>
     </section>
     <section class="home-news">
         <h3 class="home-news__title"><a href="<?php mf_the_permalink_by_title("actualite") ?>"><?= __('Notre actualité','mf');?></a></h3>
