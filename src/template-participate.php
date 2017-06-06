@@ -21,7 +21,8 @@ get_header();
             <p class="post-excerpt__info section-header__intro">
                 <?php the_field("participate_intro"); ?>
             </p>
-
+            <a class="cta cta_dark cta_no-border" href="<?php mf_the_permalink_by_title("nous contacter") ?>"><?= __('Nous contacter','mf');?></a>
+            <a class="cta cta_dark cta_no-border" href="<?php mf_the_permalink_by_title("événements") ?>"><?= __('Nos événements','mf');?></a>
         </div>
     </header>
     <section class="post content-wrapper">

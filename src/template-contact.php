@@ -22,7 +22,8 @@ get_header();
             <p class="post-excerpt__info section-header__intro">
                 <?php the_field("contact_intro"); ?>
             </p>
-
+            <a class="cta cta_dark cta_no-border" href="<?php mf_the_permalink_by_title("participer") ?>"><?= __('Participer','mf');?></a>
+            <a class="cta cta_dark cta_no-border" href="<?php mf_the_permalink_by_title("a propos") ?>"><?= __('En savoir plus sur Mariam Faso','mf');?></a>
         </div>
     </header>
     <section class="post post_contact content-wrapper">
