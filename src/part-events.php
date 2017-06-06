@@ -38,6 +38,7 @@ $events = $events->ID;
                         <time><?php the_field('event_date'); ?></time>
                     </span>
                     <span class="post-excerpt__location"><?php the_field('event_location'); ?></span>
+                    <a href="<?php the_field('event_fb'); ?>"><span class="post-excerpt__fb"><?= __("Vers l'événement facebook",'mf');?></span></a>
                 </p>
             </header>
             <div class="post-excerpt__content">

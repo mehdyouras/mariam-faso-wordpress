@@ -101,6 +101,14 @@
       margin-right: $inuit-global-spacing-unit-tiny;
     }
   }
+  &__fb {
+    display: block;
+    &::before {
+      font-family: FontAwesome;
+      content: "\f082";
+      margin-right: $inuit-global-spacing-unit-small;
+    }
+  }
   &_home {
     @media screen and (max-width: 1560px) {
       &:nth-child(n+3) {

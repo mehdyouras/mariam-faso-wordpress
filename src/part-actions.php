@@ -38,6 +38,7 @@
                         <?= __('Du','mf');?> <time datetime="<?php mf_the_datetime(get_field('action_startdate')); ?>" class="actions__time"><?php the_field('action_startdate') ?></time> <?= __('au','mf');?> <time datetime="<?php mf_the_datetime(get_field('action_enddate')); ?>" class="actions__time"><?php the_field('action_enddate') ?></time>.
                     </span>
                     <span class="post-excerpt__location"><?php the_field('action_location') ?></span>
+                    <a href="<?php the_field('action_fb'); ?>"><span class="post-excerpt__fb"><?= __("Vers l'événement facebook",'mf');?></span></a>
                 </p>
             </header>
             <div class="post-excerpt__content">
