@@ -26,7 +26,36 @@
             <a class="cta cta_over-image cta_centered-middled" href="<?php mf_the_permalink_by_title("galeries") ?>"><?= __('Découvrir nos voyages en image','mf');?></a>
         </div>
     </section>
-    <section class="home-news">
+    <section class="home-news home-news_light">
+        <h3 class="home-news__title"><a href="<?php mf_the_permalink_by_title("actualite") ?>"><?= __('Nos prochains événements','mf');?></a></h3>
+        <div class="home-news__article-container">
+            <?php
+            $args = array(
+                'post_type' => 'event',
+                'posts_per_page' => 3,);
+
+            $loop = new WP_Query( $args );
+            if ( $loop->have_posts() ) : while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                <article class="post-excerpt">
+                    <header class="post-excerpt__header">
+                        <h4 class="post-excerpt__title"><a class="post-excerpt__link" href="<?php the_permalink(); ?>"><?php the_field('event_title'); ?></a></h4>
+                        <p class="post-excerpt__info">
+                    <span class="post-excerpt__date">
+                        <time><?php the_field('event_date'); ?></time>
+                    </span>
+                            <span class="post-excerpt__location"><?php the_field('event_location'); ?></span>
+                        </p>
+                    </header>
+                    <div class="post-excerpt__content">
+                        <?php mf_the_image(get_field('event_thumbnail'), "mf_thumbnail", "post-excerpt__thumbnail"); ?>
+                        <p class="post-excerpt__description"><?php the_field('event_excerpt'); ?></p>
+                    </div>
+                    <a class="cta cta_dark cta_no-border cta_force-right" href="<?php the_permalink(); ?>"><?= __('En savoir plus','mf');?></a>
+                </article>
+            <?php endwhile; endif; ?>
+        </div>
+    </section>
+    <section class="home-news home-news_dark">
         <h3 class="home-news__title"><a href="<?php mf_the_permalink_by_title("actualite") ?>"><?= __('Notre actualité','mf');?></a></h3>
         <div class="home-news__article-container">
             <?php

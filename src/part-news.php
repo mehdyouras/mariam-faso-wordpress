@@ -1,7 +1,11 @@
 <article class="post-excerpt <?php if(is_front_page()) :?>post-excerpt_home<?php endif; ?>">
     <div class="post-excerpt__content-wrapper">
         <header class="post-excerpt__header">
-            <h3 class="post-excerpt__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+            <?php if(is_front_page()): ?>
+            <h4 class="post-excerpt__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+            <?php else: ?>
+                <h3 class="post-excerpt__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+            <?php endif; ?>
             <p class="post-excerpt__info">
                         <span class="post-excerpt__date">
                             <time class="actions__time" datetime="<?= mf_get_datetime(get_field('post_date')); ?>"><?php the_field('post_date') ?></time>
