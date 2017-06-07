@@ -179,8 +179,10 @@
     &__dropdown {
         transition: 0.1s;
         display: block;
-        margin-top: inuit-rem(119px);
+        //margin-top: inuit-rem(119px);
         //margin-left: -28px;
+        position: absolute;
+        top: inuit-rem(84px);
         opacity: 0;
         //height: 0;
         position: absolute;
