@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="<?php mf_asset('css/main.css'); ?>">
     <link rel="icon" href="<?php mf_asset('img/favicon.png'); ?>">
-    <script src="<?php mf_asset('js/jquery.slim.min.js'); ?>"></script>
     <title><?php mf_the_title(); ?> - Mariam-Faso</title>
 </head>
 <body>
