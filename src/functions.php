@@ -4,6 +4,7 @@ add_action('init', 'mf_create_custom_post_types');
 add_theme_support('post-thumbnails');
 
 add_image_size( 'mf_thumbnail', 480, 320);
+add_image_size( 'mf_large', 1080);
 
 // Allow SVG
 add_filter( 'wp_check_filetype_and_ext', function($data, $file, $filename, $mimes) {
@@ -373,4 +374,8 @@ function mf_the_title() {
     }
 
     echo $title;
+}
+
+function mf_the_video($url) {
+    echo substr($url, strpos($url, '=')+1);
 }
