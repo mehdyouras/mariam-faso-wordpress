@@ -1,10 +1,10 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 <footer class="footer">
-    <h2 aria-hidden="true">Pied de page</h2>
+    <h2 aria-hidden="true"><?= __('Pied de page','mf');?></h2>
     <div class="footer__container">
         <section class="footer__item footer-partners">
-            <h3>Nos partenaires</h3>
+            <h3><?= __('Nos partenaires','mf');?></h3>
             <?php if( have_rows('partners', 'option') ): ?>
             <ul class="o-list-inline">
                 <?php while ( have_rows('partners', 'option') ) : the_row(); ?>
@@ -19,16 +19,16 @@
             <?php endif; ?>
         </section>
         <section class="footer__item footer-donation">
-            <h3><a class="footer-donation__donation-link cta cta_no-border cta_title" href="<?php mf_the_permalink_by_title("faire un don") ?>">Faire un don</a></h3>
+            <h3><a class="footer-donation__donation-link cta cta_no-border cta_title" href="<?php mf_the_permalink_by_title("faire un don") ?>"><?= __('Faire un don','mf');?></a></h3>
             <dl class="donation-iban__list">
-                <dt class="donation-iban__term">Numéro de compte&nbsp;:</dt>
+                <dt class="donation-iban__term"><?= __('Numéro de compte','mf');?></dt>
                 <dd class="donation-iban__definition"><?php the_field('iban_frb', 'option');?></dd>
-                <dt class="donation-iban__term">Communication structurée&nbsp;:</dt>
+                <dt class="donation-iban__term"><?= __('Communication structurée','mf');?></dt>
                 <dd class="donation-iban__definition"><?php the_field('com_frb', 'option');?></dd>
             </dl>
         </section>
         <section class="footer__item footer-project">
-            <h3><a class="footer-project__contact-link cta cta_no-border cta_title" href="<?php mf_the_permalink_by_title("projets") ?>">Nos derniers projets</a></h3>
+            <h3><a class="footer-project__contact-link cta cta_no-border cta_title" href="<?php mf_the_permalink_by_title("projets") ?>"><?= __('Nos derniers projets','mf');?></a></h3>
             <ol class="o-list-bare">
 
                 <?php
@@ -44,13 +44,13 @@
                 <li><a class="footer-project__link" href="<?php the_permalink(); ?>"><?php the_field('project_name') ?></a></li>
                 <?php endwhile; ?>
             </ol>
-            <a href="<?php mf_the_permalink_by_title("participer") ?>" class="cta">Participer</a>
+            <a href="<?php mf_the_permalink_by_title("participer") ?>" class="cta"><?= __('Participer','mf');?></a>
         </section>
         <section class="footer__item footer-contact">
-            <h3><a class="footer-contact__contact-link cta cta_no-border cta_title" href="<?php mf_the_permalink_by_title("nous contacter") ?>">Nous contacter</a></h3>
+            <h3><a class="footer-contact__contact-link cta cta_no-border cta_title" href="<?php mf_the_permalink_by_title("nous contacter") ?>"><?= __('Nous contacter','mf');?></a></h3>
             <address class="footer-contact__content">
-                <span class="footer-contact__content-item">Mariam-Faso ASBL</span>
-                <span class="footer-contact__content-item">Association sociale</span>
+                <span class="footer-contact__content-item"><?= __('Mariam Faso ASBL','mf');?></span>
+                <span class="footer-contact__content-item"><?= __('Association sociale','mf');?></span>
                 <span class="footer-contact__content-item"><?php the_field('street', 'option');?></span>
                 <span class="footer-contact__content-item"><?php the_field('locality', 'option');?></span>
                 <span class="footer-contact__content-item footer-contact__content-item_icon-phone"><?php the_field('phone', 'option');?></span>
@@ -69,7 +69,7 @@
         <?php endwhile; endif;?>
     </section>
     <section class="footer__copyright">
-        <small>&copy; 2017 Mehdy Ouras</small>
+        <small><?= __('&copy; 2017 ','mf');?><a class="author" href="http://mehdy.ouras.be/"><?= __('Mehdy Ouras','mf');?></a></small>
     </section>
 </footer>
 <?php endwhile;?>
