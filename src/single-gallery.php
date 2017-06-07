@@ -2,7 +2,7 @@
 get_header();
 ?>
 
-<section class="wrapper">
+<article class="wrapper">
     <header class="section-header section-header_gallery">
         <div class="section-header__content-container">
             <div class="section-header__breadcrumb">
@@ -21,7 +21,7 @@ get_header();
             </p>
         </div>
     </header>
-    <section class="post content-wrapper">
+    <div class="post content-wrapper">
         <ul class="images-list">
             <?php $i = 0; $images = get_field('gallery'); if( $images ): ?>
                 <?php foreach($images as $image) :?>
@@ -35,7 +35,8 @@ get_header();
                 <?php endforeach; ?>
             <?php endif; ?>
         </ul>
-    </section>
+    </div>
     <?php endwhile; ?>
     <?php endif; ?>
+</article>
     <?php get_footer(); ?>

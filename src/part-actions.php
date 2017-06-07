@@ -19,7 +19,7 @@
         <a class="cta cta_dark cta_no-border" href="<?php mf_the_permalink_by_title("participer") ?>"><?= __('Participer','mf');?></a>
     </div>
 </header>
-<section class="excerpt-container content-wrapper">
+<div class="excerpt-container content-wrapper">
     <?php
     $args = array( 'post_type' => 'action',
         'posts_per_page' => -1,
@@ -47,4 +47,4 @@
         </div>
     </article>
     <?php endwhile; ?>
-</section>
+</div>

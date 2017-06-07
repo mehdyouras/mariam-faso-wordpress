@@ -41,5 +41,6 @@ get_header();
             <?php the_field('contact_form'); ?>
         </section>
     </section>
+</section>
 <?php get_footer(); ?>
 

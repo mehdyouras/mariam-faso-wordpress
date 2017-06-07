@@ -41,7 +41,7 @@
                         <h4 class="post-excerpt__title"><a class="post-excerpt__link" href="<?php the_permalink(); ?>"><?php the_field('event_title'); ?></a></h4>
                         <p class="post-excerpt__info">
                     <span class="post-excerpt__date">
-                        <time><?php the_field('event_date'); ?></time>
+                        <time datetime="<?php mf_the_datetime(get_field('event_date')) ?>"><?php the_field('event_date'); ?></time>
                     </span>
                             <span class="post-excerpt__location"><?php the_field('event_location'); ?></span>
                         </p>
@@ -69,4 +69,5 @@
             <?php endwhile; endif; ?>
         </div>
     </section>
+</section>
 <?php get_footer(); ?>

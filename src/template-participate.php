@@ -5,7 +5,7 @@
 get_header();
 ?>
 
-<section class="wrapper">
+<article class="wrapper">
     <header class="section-header section-header_participate">
         <div class="section-header__content-container">
             <div class="section-header__breadcrumb">
@@ -26,7 +26,7 @@ get_header();
         </div>
     </header>
     <section class="post content-wrapper">
-        <h2 class="u-hidden-visually">Foire aux questions</h2>
+        <h2 class="u-hidden-visually"><?= __('Foire aux questions','mf');?></h2>
         <?php if( have_rows('participate_faq') ): ?>
         <dl class="qa">
             <?php while ( have_rows('participate_faq') ) : the_row(); ?>
@@ -45,6 +45,6 @@ get_header();
         </dl>
         <?php endif; ?>
     </section>
-
+</article>
 
 <?php get_footer(); ?>

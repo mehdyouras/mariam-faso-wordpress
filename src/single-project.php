@@ -25,7 +25,9 @@ get_header();
             <?php endif; ?>
                 <span class="post-excerpt__location"><?php the_field('project_location'); ?></span>
             </p>
-
+            <?php if(get_field('project_gallery')) : ?>
+                <a class="cta cta_dark cta_no-border" href="<?php the_field('project_gallery'); ?>"><?= __("Découvrir nos photos du projet", "mf")?></a>
+            <?php endif; ?>
         </div>
     </header>
     <section class="post content-wrapper">
@@ -39,4 +41,5 @@ get_header();
     </section>
     <?php endwhile; ?>
     <?php endif; ?>
+</section>
     <?php get_footer(); ?>

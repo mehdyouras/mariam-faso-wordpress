@@ -37,4 +37,5 @@ get_header();
             </a>
         <?php endwhile; ?>
     </section>
+</section>
     <?php get_footer(); ?>

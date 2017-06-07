@@ -21,7 +21,7 @@ get_header();
             <a class="cta cta_dark cta_no-border" href="<?php mf_the_permalink_by_title("participer") ?>">Participer</a>
         </div>
     </header>
-    <section class="excerpt-container content-wrapper">
+    <div class="excerpt-container content-wrapper">
         <?php
         $args = array(
                         'post_type' => 'post',
@@ -31,7 +31,7 @@ get_header();
         if ( $loop->have_posts() ) : while ( $loop->have_posts() ) : $loop->the_post(); ?>
             <?php get_template_part('part', 'news');?>
         <?php endwhile; endif; ?>
-    </section>
-
+    </div>
+</section>
 
 <?php get_footer(); ?>

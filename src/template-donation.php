@@ -5,7 +5,7 @@
 get_header();
 ?>
 
-<section class="wrapper">
+<article class="wrapper">
     <header class="section-header section-header_donation">
         <div class="section-header__content-container">
             <div class="section-header__breadcrumb">
@@ -45,5 +45,6 @@ get_header();
             <a class="cta cta_dark" href="<?php the_field('donation_frb'); ?>"><?= __('Réaliser un don en ligne','mf');?></a>
         </section>
     </section>
+</article>
 
 <?php get_footer(); ?>

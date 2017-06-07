@@ -2,7 +2,7 @@
 get_header();
 ?>
 
-<section class="wrapper">
+<article class="wrapper">
     <header class="section-header section-header_post">
         <div class="section-header__content-container">
             <div class="section-header__breadcrumb">
@@ -19,14 +19,14 @@ get_header();
             <?php if(get_field('post_date')) :?>
             <p class="post-excerpt__info section-header__intro">
                 <span class="post-excerpt__date">
-                    <time <?= mf_get_datetime(get_field('post_date')); ?>><?php the_field('post_date'); ?></time>
+                    <time datetime="<?= mf_get_datetime(get_field('post_date')); ?>"><?php the_field('post_date'); ?></time>
                 </span>
                 <?php endif; ?>
             </p>
 
         </div>
     </header>
-    <section class="post content-wrapper">
+    <div class="post content-wrapper">
         <?php
         if( have_rows('flexible') ): ?>
             <?php while ( have_rows('flexible') ) : the_row(); ?>
@@ -34,7 +34,8 @@ get_header();
             <?php endwhile; ?>
 
         <?php endif; ?>
-    </section>
+    </div>
     <?php endwhile; ?>
     <?php endif; ?>
+</article>
     <?php get_footer(); ?>

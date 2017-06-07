@@ -7,11 +7,18 @@
     <link rel="stylesheet" href="<?php mf_asset('css/main.css'); ?>">
     <link rel="icon" href="<?php mf_asset('img/favicon.png'); ?>">
     <title><?php mf_the_title(); ?> - Mariam-Faso</title>
+    <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 </head>
 <body>
 <header class="header <?php if(!is_front_page()) :?>header_small<?php endif; ?>">
     <div class="site-header">
-        <h1 class="site-title"><a class="site-title__link" href="<?= get_site_url(); ?>"><img class="site-title__logo" src="<?php mf_asset('img/logo.svg'); ?>" alt"Logo de Mariam-Faso"><span class="site-title__content">Marriam-Faso</span></a></h1>
+        <h1 class="site-title">
+            <a class="site-title__link" href="<?= get_site_url(); ?>">
+                <img class="site-title__logo" src="<?php mf_asset('img/logo.svg'); ?>" alt="Mariam-Faso">
+            </a>
+        </h1>
         <a class="hamburger-menu" href="#"></a>
         <?php get_template_part('part', 'navbar');?>
     </div>

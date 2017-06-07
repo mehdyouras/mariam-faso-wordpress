@@ -5,7 +5,7 @@
 get_header();
 ?>
 
-<section class="wrapper">
+<article class="wrapper">
     <header class="section-header section-header_aboutus">
         <div class="section-header__content-container">
             <div class="section-header__breadcrumb">
@@ -23,7 +23,7 @@ get_header();
             <a class="cta cta_dark cta_no-border" href="<?php mf_the_permalink_by_title("nous contacter") ?>">Nous contacter</a>
         </div>
     </header>
-    <section class="post content-wrapper">
+    <div class="post content-wrapper">
         <?php
         if( have_rows('flexible') ): ?>
             <?php while ( have_rows('flexible') ) : the_row(); ?>
@@ -31,5 +31,6 @@ get_header();
             <?php endwhile; ?>
 
         <?php endif; ?>
-    </section>
-    <?php get_footer(); ?>
+    </div>
+</article>
+<?php get_footer(); ?>
