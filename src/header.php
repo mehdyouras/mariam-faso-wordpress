@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="<?php mf_asset('css/main.css'); ?>">
-    <link rel="icon" href="img/favicon.ico">
-    <title>Accueil - Mariam-Faso</title>
+    <link rel="icon" href="<?php mf_asset('img/favicon.png'); ?>">
+    <script src="<?php mf_asset('js/jquery.slim.min.js'); ?>"></script>
+    <title><?php mf_the_title(); ?> - Mariam-Faso</title>
 </head>
 <body>
 <header class="header <?php if(!is_front_page()) :?>header_small<?php endif; ?>">

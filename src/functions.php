@@ -364,3 +364,13 @@ function mf_the_image($image, $sizeWanted, $class = '', $needCaption = false) {
     $imageTag = '<img class="' .$class. '" src="'.$thumb. '" alt="'.$alt.'" />'.$captionTag;
     echo $imageTag;
 }
+
+function mf_the_title() {
+    $title = get_the_title();
+
+    if(is_front_page()) {
+        $title = 'Accueil';
+    }
+
+    echo $title;
+}
