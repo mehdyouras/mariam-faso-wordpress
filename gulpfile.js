@@ -4,7 +4,8 @@ var gulp = require("gulp"),
     sass = require("gulp-sass"),
     autoprefixer = require("gulp-autoprefixer"),
     csso = require("gulp-csso"),
-    babel = require("gulp-babel");
+    babel = require("gulp-babel"),
+    concat = require("gulp-concat");
 
 // --- Task for images
 gulp.task("images", function() {
@@ -42,8 +43,13 @@ gulp.task("css", function() {
 // --- Task for js
 gulp.task("js", function() {
     gulp.src("src/js/**/*.js")
-        .pipe(babel())
+        .pipe(babel({
+            only : "script.js",
+        }))
+        .pipe(concat('script.js'))
         .pipe(gulp.dest("assets/js"));
+    gulp.src("node_modules/jquery/dist/jquery.slim.min.js").
+        pipe(gulp.dest("assets/js"));
 });
 
 // -- Task for fonts
