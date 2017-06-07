@@ -24,11 +24,11 @@ get_header();
     <section class="post content-wrapper">
         <ul class="images-list">
             <?php $i = 0; $images = get_field('gallery'); if( $images ): ?>
-                <?php foreach($images as $image) : $i++;?>
+                <?php foreach($images as $image) :?>
                     <li class="images-list__item">
-                        <a href="<?= $image['url']; ?>" data-rel="<?php echo $i; ?>">
-                            <?php mf_the_image($image, 'medium', 'images-list__image', true) ?>
+                        <a href="<?= $image['url']; ?>" data-lightbox="gallery" data-title="<?= $image['caption']; ?>">
                             <figure>
+                                <?php mf_the_image($image, 'medium', 'images-list__image', true) ?>
                             </figure>
                         </a>
                     </li>

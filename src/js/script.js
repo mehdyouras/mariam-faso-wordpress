@@ -45,6 +45,13 @@ const fPageIsLoaded = function() {
         $link.addEventListener("blur", removeFocusDropdownMenu);
     });
     window.addEventListener("scroll", navbarScroll);
+    lightbox.option({
+        'resizeDuration': 200,
+        'wrapAround': true,
+        'disableScrolling' : true,
+        'showImageNumberLabel': true,
+        'albumLabel': 'Image %1 sur %2',
+    })
 }
 
 window.addEventListener("load", fPageIsLoaded);
