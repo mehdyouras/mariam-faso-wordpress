@@ -1,10 +1,10 @@
-<article class="post-excerpt <?php if(is_front_page()) :?>post-excerpt_home<?php endif; ?>">
+<article role="article" class="post-excerpt <?php if(is_front_page()) :?>post-excerpt_home<?php endif; ?>">
     <div class="post-excerpt__content-wrapper">
         <header class="post-excerpt__header">
             <?php if(is_front_page()): ?>
-            <h4 class="post-excerpt__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+            <h4 aria-level=4 class="post-excerpt__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
             <?php else: ?>
-                <h3 class="post-excerpt__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                <h3 aria-level=3 class="post-excerpt__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
             <?php endif; ?>
             <p class="post-excerpt__info">
                         <span class="post-excerpt__date">
@@ -17,5 +17,5 @@
             <p class="post__description"><?php the_field('post_excerpt'); ?></p>
         </div>
     </div>
-    <a class="cta cta_dark cta_no-border cta_force-right" href="<?php the_permalink(); ?>"><?= __('Lire plus','mf');?></a>
+    <a class="cta cta_dark cta_no-border cta_force-right" href="<?php the_permalink(); ?>"><?= __('Lire plus','mf');?><span class="u-hidden-visually" aria-hidden="true"><?= __(" de l'article ",'mf');?><?php the_title(); ?></span></a>
 </article>

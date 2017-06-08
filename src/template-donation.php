@@ -5,7 +5,7 @@
 get_header();
 ?>
 
-<article class="wrapper">
+<article role="article" class="wrapper">
     <header class="section-header section-header_donation">
         <div class="section-header__content-container">
             <div class="section-header__breadcrumb">
@@ -17,7 +17,7 @@ get_header();
                 ?>
             </div>
 
-            <h2 class="section-header__title"><?php the_title(); ?></h2>
+            <h2 aria-level=2 class="section-header__title"><?php the_title(); ?></h2>
             <p class="post-excerpt__info section-header__intro">
                 <?php the_field("donation_intro"); ?>
             </p>
@@ -26,16 +26,16 @@ get_header();
         </div>
     </header>
     <section class="post post_donation content-wrapper">
-        <h2 class="u-hidden-visually"><?= __('Réaliser un don','mf');?></h2>
+        <h2 aria-level=2 class="u-hidden-visually" aria-hidden="true"><?= __('Réaliser un don','mf');?></h2>
         <section class="donation__column">
-            <h3><?= __("Les avantages fiscaud d'une donation",'mf');?></h3>
+            <h3 aria-level=3><?= __("Les avantages fiscaud d'une donation",'mf');?></h3>
             <div class="wysiwyg">
                 <?php the_field('donation_fisc') ?>
             </div>
             <a href="<?php the_field('donation_spf') ?>" class="cta cta_dark"><?= __('En savoir plus sur les avantages fiscaux','mf');?></a>
         </section>
         <section class="donation__column">
-            <h3><?= __('Réaliser un don via la fondation roi baudouin','mf');?></h3>
+            <h3 aria-level=3><?= __('Réaliser un don via la fondation roi baudouin','mf');?></h3>
             <dl class="donation-iban__list">
                 <dt class="donation-iban__term"><?= __('Numéro de compte','mf');?></dt>
                 <dd class="donation-iban__definition donation-iban__definition_full-color"><?php the_field('iban_frb', 'option');?></dd>

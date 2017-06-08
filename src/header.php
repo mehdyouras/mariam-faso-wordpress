@@ -12,14 +12,14 @@
     <![endif]-->
 </head>
 <body>
-<header class="header <?php if(!is_front_page()) :?>header_small<?php endif; ?>">
+<header role="banner" class="header <?php if(!is_front_page()) :?>header_small<?php endif; ?>">
     <div class="site-header">
-        <h1 class="site-title">
+        <h1 aria-level=1 class="site-title">
             <a class="site-title__link" href="<?= get_site_url(); ?>">
-                <img class="site-title__logo" src="<?php mf_asset('img/logo.svg'); ?>" alt="Mariam-Faso">
+                <img class="site-title__logo" src="<?php mf_asset('img/logo.svg'); ?>" alt="Mariam Faso">
             </a>
         </h1>
-        <a class="hamburger-menu" href="#"></a>
+        <a class="hamburger-menu" href="#"><span class="u-hidden-visually" aria-hidden="true">Menu hamburger</span></a>
         <?php get_template_part('part', 'navbar');?>
     </div>
     <?php if(is_front_page()): ?>

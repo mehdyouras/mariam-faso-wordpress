@@ -16,7 +16,7 @@ get_header();
                 }
                 ?>
             </div>
-            <h2 class="section-header__title"><?php the_title(); ?></h2>
+            <h2 aria-level=2 class="section-header__title"><?php the_title(); ?></h2>
             <p class="section-header__intro"><?php the_field("gallery_intro") ?></p>
             <a class="cta cta_dark cta_no-border" href="<?php mf_the_permalink_by_title("projets") ?>">Nos projets</a>
             <a class="cta cta_dark cta_no-border" href="<?php mf_the_permalink_by_title("participer") ?>">Participer</a>
@@ -24,7 +24,7 @@ get_header();
         </div>
     </header>
     <section class="excerpt-container content-wrapper">
-        <h2 class="u-hidden-visually">Les galeries</h2>
+        <h2 aria-level=2 class="u-hidden-visually" aria-hidden="true">Les galeries</h2>
         <?php
         $args = array( 'post_type' => 'gallery',
             'posts_per_page' => -1,

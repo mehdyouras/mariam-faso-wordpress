@@ -18,7 +18,7 @@ get_header();
                 ?>
             </div>
 
-            <h2 class="section-header__title"><?php the_title(); ?></h2>
+            <h2 aria-level=2 class="section-header__title"><?php the_title(); ?></h2>
             <p class="post-excerpt__info section-header__intro">
                 <?php the_field("contact_intro"); ?>
             </p>
@@ -27,9 +27,9 @@ get_header();
         </div>
     </header>
     <section class="post post_contact content-wrapper">
-        <h2 class="u-hidden-visually">Nous contacter</h2>
+        <h2 aria-level=2 class="u-hidden-visually" aria-hidden="true">Nous contacter</h2>
         <section class="donation__column">
-            <h3>Nous contacter directement par email</h3>
+            <h3 aria-level=3>Nous contacter directement par email</h3>
             <ul>
                 <?php if( have_rows('contact_list') ): while ( have_rows('contact_list') ) : the_row(); ?>
                     <li><?php the_sub_field('contact_email') ?></li>
@@ -37,7 +37,7 @@ get_header();
             </ul>
         </section>
         <section class="donation__column">
-            <h3>Ou via ce formulaire</h3>
+            <h3 aria-level=3>Ou via ce formulaire</h3>
             <?php the_field('contact_form'); ?>
         </section>
     </section>

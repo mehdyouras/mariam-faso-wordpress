@@ -1,5 +1,5 @@
-<nav class="site-nav">
-    <h2 aria-hidden="true">Navigation principale</h2>
+<nav role="navigation" class="site-nav">
+    <h2 aria-level=2 aria-hidden="true">Navigation principale</h2>
     <a class="site-nav__close-btn" href="#">&times;</a>
     <ul class="o-list-bare site-nav__list">
         <?php $current_url = get_permalink();?>

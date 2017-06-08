@@ -12,13 +12,21 @@
   &__question {
     font-family: "Open Sans", sans-serif;
     font-size: $inuit-font-size-h3;
-    margin-bottom: $inuit-global-spacing-unit-small;
     align-items: center;
-
+    padding-left: $inuit-global-spacing-unit;
+    border-left: 3px solid $mf-orange;
+    margin-bottom: 0;
+    padding-bottom: $inuit-global-spacing-unit-small;
   }
   &__answer {
     margin: 0;
+    margin-bottom: 2*$inuit-global-spacing-unit;
     max-width: 30em;
     align-items: center;
+    padding-left: $inuit-global-spacing-unit;
+    border-left: 3px solid $mf-orange;
+  }
+  &__ctas {
+    margin-top: $inuit-global-spacing-unit;
   }
 }

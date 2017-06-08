@@ -1,11 +1,11 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-<footer class="footer">
+<footer role="contentinfo" class="footer">
     <section>
-        <h2 class="u-hidden-visually">Pied de page</h2>
+        <h2 aria-level=2 class="u-hidden-visually" aria-hidden="true">Pied de page</h2>
         <div class="footer__container">
             <section class="footer__item footer-partners">
-                <h3><?= __('Nos partenaires','mf');?></h3>
+                <h3 aria-level=3><?= __('Nos partenaires','mf');?></h3>
                 <?php if( have_rows('partners', 'option') ): ?>
                     <ul class="o-list-inline">
                         <?php while ( have_rows('partners', 'option') ) : the_row(); ?>
@@ -20,7 +20,7 @@
                 <?php endif; ?>
             </section>
             <section class="footer__item footer-donation">
-                <h3><a class="footer-donation__donation-link cta cta_no-border cta_title" href="<?php mf_the_permalink_by_title("faire un don") ?>"><?= __('Faire un don','mf');?></a></h3>
+                <h3 aria-level=3><a class="footer-donation__donation-link cta cta_no-border cta_title" href="<?php mf_the_permalink_by_title("faire un don") ?>"><?= __('Faire un don','mf');?></a></h3>
                 <dl class="donation-iban__list">
                     <dt class="donation-iban__term"><?= __('Numéro de compte','mf');?></dt>
                     <dd class="donation-iban__definition"><?php the_field('iban_frb', 'option');?></dd>
@@ -29,7 +29,7 @@
                 </dl>
             </section>
             <section class="footer__item footer-project">
-                <h3><a class="footer-project__contact-link cta cta_no-border cta_title" href="<?php mf_the_permalink_by_title("projets") ?>"><?= __('Nos derniers projets','mf');?></a></h3>
+                <h3 aria-level=3><a class="footer-project__contact-link cta cta_no-border cta_title" href="<?php mf_the_permalink_by_title("projets") ?>"><?= __('Nos derniers projets','mf');?></a></h3>
                 <ol class="o-list-bare">
 
                     <?php
@@ -48,7 +48,7 @@
                 <a href="<?php mf_the_permalink_by_title("participer") ?>" class="cta"><?= __('Participer','mf');?></a>
             </section>
             <section class="footer__item footer-contact">
-                <h3><a class="footer-contact__contact-link cta cta_no-border cta_title" href="<?php mf_the_permalink_by_title("nous contacter") ?>"><?= __('Nous contacter','mf');?></a></h3>
+                <h3 aria-level=3><a class="footer-contact__contact-link cta cta_no-border cta_title" href="<?php mf_the_permalink_by_title("nous contacter") ?>"><?= __('Nous contacter','mf');?></a></h3>
                 <address class="footer-contact__content">
                     <span class="footer-contact__content-item"><?= __('Mariam Faso ASBL','mf');?></span>
                     <span class="footer-contact__content-item"><?= __('Association sociale','mf');?></span>
@@ -60,18 +60,18 @@
             </section>
         </div>
         <section class="footer__social">
-            <h3 class="u-hidden-visually">Nos réseaux sociaux</h3>
+            <h3 aria-level=3 class="u-hidden-visually" aria-hidden="true">Nos réseaux sociaux</h3>
             <?php if( have_rows('social_network', 'option') ): ?>
                 <?php while ( have_rows('social_network', 'option') ) : the_row(); ?>
                     <?php
                     $sn_name = get_sub_field('social_network_name');
                     $sn_link = get_sub_field('social_network_link');
                     ?>
-                    <a class="footer__social-link footer__social-link<?= $sn_name['value']; ?>" title="<?= $sn_name['label']; ?>" href="<?= $sn_link; ?>"><span class="footer__social-text"><?= $sn_name['label'];?></span></a>
+                    <a class="footer__social-link footer__social-link<?= $sn_name['value']; ?>" href="<?= $sn_link; ?>"><span class="footer__social-text"><?= $sn_name['label'];?></span></a>
                 <?php endwhile; endif;?>
         </section>
         <section class="footer__copyright">
-            <h3 class="u-hidden-visually">Droits d'auteur</h3>
+            <h3 aria-level=3 class="u-hidden-visually" aria-hidden="true">Droits d'auteur</h3>
             <small><?= __('&copy; 2017 ','mf');?><a class="author" href="http://mehdy.ouras.be/"><?= __('Mehdy Ouras','mf');?></a></small>
         </section>
     </section>

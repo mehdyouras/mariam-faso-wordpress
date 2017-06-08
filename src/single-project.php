@@ -15,7 +15,7 @@ get_header();
             </div>
             <?php if (have_posts()) : ?>
             <?php while (have_posts()) : the_post(); ?>
-            <h2 class="section-header__title"><?php the_title(); ?></h2>
+            <h2 aria-level=2 class="section-header__title"><?php the_title(); ?></h2>
             <?php if(get_field('project_startdate')) :?>
             <p class="post-excerpt__info section-header__intro">
                 <span class="post-excerpt__date">

@@ -14,7 +14,7 @@ $events = $events->ID;
             }
             ?>
         </div>
-        <h2 class="section-header__title"><?= __('Les évènements','mf');?></h2>
+        <h2 aria-level=2 class="section-header__title"><?= __('Les évènements','mf');?></h2>
         <p class="section-header__intro"><?php the_field('events_intro', $events); ?></p>
         <a class="cta cta_dark cta_no-border" href="<?php mf_the_permalink_by_title("faire un don") ?>"><?= __('Faire un don','mf');?></a>
         <a class="cta cta_dark cta_no-border" href="<?php mf_the_permalink_by_title("participer") ?>"><?= __('Participer','mf');?></a>
@@ -30,9 +30,9 @@ $events = $events->ID;
     );
     $loop = new WP_Query( $args );
     while ( $loop->have_posts() ) : $loop->the_post(); ?>
-        <article class="post-excerpt">
+        <article role="article" class="post-excerpt">
             <header class="post-excerpt__header">
-                <h3 class="post-excerpt__title"><a class="post-excerpt__link" href="<?php the_permalink(); ?>"><?php the_field('event_title'); ?></a></h3>
+                <h3 aria-level=3 class="post-excerpt__title"><a class="post-excerpt__link" href="<?php the_permalink(); ?>"><?php the_field('event_title'); ?></a></h3>
                 <p class="post-excerpt__info">
                     <span class="post-excerpt__date">
                         <time datetime="<?php mf_the_datetime(get_field('event_date')) ?>"><?php the_field('event_date'); ?></time>
@@ -45,7 +45,7 @@ $events = $events->ID;
                 <?php mf_the_image(get_field('event_thumbnail'), "mf_thumbnail", "post-excerpt__thumbnail"); ?>
                 <p class="post-excerpt__description"><?php the_field('event_excerpt'); ?></p>
             </div>
-            <a class="cta cta_dark cta_no-border cta_force-right" href="<?php the_permalink(); ?>"><?= __('En savoir plus','mf');?></a>
+            <a class="cta cta_dark cta_no-border cta_force-right" href="<?php the_permalink(); ?>"><?= __('En savoir plus','mf');?><span class="u-hidden-visually" aria-hidden="true"><?= __(" sur l'événement ",'mf');?><?php the_title(); ?></a>
         </article>
     <?php endwhile; ?>
 </div>
