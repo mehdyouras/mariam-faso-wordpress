@@ -106,7 +106,7 @@
     &::before {
       font-family: FontAwesome;
       content: "\f082";
-      margin-right: $inuit-global-spacing-unit-small;
+      margin-right: inuit-rem(12px);
     }
   }
   &__gallery {
