@@ -47,15 +47,17 @@
                 </ol>
                 <a href="<?php mf_the_permalink_by_title("participer") ?>" class="cta"><?= __('Participer','mf');?></a>
             </section>
-            <section class="footer__item footer-contact">
+            <section  class="footer__item footer-contact">
                 <h3 aria-level=3><a class="footer-contact__contact-link cta cta_no-border cta_title" href="<?php mf_the_permalink_by_title("nous contacter") ?>"><?= __('Nous contacter','mf');?></a></h3>
-                <address class="footer-contact__content">
-                    <span class="footer-contact__content-item"><?= __('Mariam Faso ASBL','mf');?></span>
+                <address itemscope itemtype="http://schema.org/Organization" class="footer-contact__content">
+                    <span itemprop="name" class="footer-contact__content-item"><?= __('Mariam Faso ASBL','mf');?></span>
                     <span class="footer-contact__content-item"><?= __('Association sociale','mf');?></span>
-                    <span class="footer-contact__content-item"><?php the_field('street', 'option');?></span>
-                    <span class="footer-contact__content-item"><?php the_field('locality', 'option');?></span>
-                    <span class="footer-contact__content-item footer-contact__content-item_icon-phone"><?php the_field('phone', 'option');?></span>
-                    <span class="footer-contact__content-item footer-contact__content-item_icon-email"><?php the_field('email', 'option');?></span>
+                    <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                        <span itemprop="streetAddress" class="footer-contact__content-item"><?php the_field('street', 'option');?></span>
+                        <span itemprop="addressLocality" class="footer-contact__content-item"><?php the_field('locality', 'option');?></span>
+                    </div>
+                    <span itemprop="telephone" class="footer-contact__content-item footer-contact__content-item_icon-phone"><?php the_field('phone', 'option');?></span>
+                    <span itemprop="email" class="footer-contact__content-item footer-contact__content-item_icon-email"><?php the_field('email', 'option');?></span>
                 </address>
             </section>
         </div>
