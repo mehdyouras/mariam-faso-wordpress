@@ -2,7 +2,7 @@
 get_header();
 ?>
 
-<article role="article" class="wrapper">
+<article itemscope itemtype="http://schema.org/Event" role="article" class="wrapper">
     <header class="section-header section-header_events">
         <div class="section-header__content-container">
             <div class="section-header__breadcrumb">
@@ -15,19 +15,23 @@ get_header();
             </div>
             <?php if (have_posts()) : ?>
             <?php while (have_posts()) : the_post(); ?>
-            <h2 aria-level=2 class="section-header__title"><?php the_title(); ?></h2>
+            <h2 itemprop="name" aria-level=2 class="section-header__title"><?php the_title(); ?></h2>
             <?php if(get_field('event_date')) :?>
             <p class="post-excerpt__info section-header__intro">
                 <span class="post-excerpt__date">
-                    <time datetime="<?= mf_get_datetime(get_field('event_date')); ?>"><?php the_field('event_date'); ?></time>
+                    <time itemprop="startDate" datetime="<?= mf_get_datetime(get_field('event_date')); ?><?php if(get_field('event_time') !== ''): echo 'T'; the_field('event_time'); endif; ?>"><?php the_field('event_date'); ?><?php if(get_field('event_time')): ?><?= __(' à ','mf'); ?><?php the_field('event_time'); ?><?php endif; ?></time>
                 </span>
                 <?php endif; ?>
-                <span class="post-excerpt__location"><?php the_field('event_location'); ?></span>
+                <span itemprop="location" itemscope itemtype="http://schema.org/Place" class="post-excerpt__location">
+                        <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                            <span itemprop="streetAddress"><?php the_field('event_location'); ?></span>
+                    </span>
+                </span>
             </p>
 
         </div>
     </header>
-    <div class="post content-wrapper">
+    <div itemprop="description" class="post content-wrapper">
         <?php
         if( have_rows('flexible') ): ?>
             <?php while ( have_rows('flexible') ) : the_row(); ?>

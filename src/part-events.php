@@ -35,7 +35,7 @@ $events = $events->ID;
                 <h3 itemprop="name" aria-level=3 class="post-excerpt__title"><a class="post-excerpt__link" href="<?php the_permalink(); ?>"><?php the_field('event_title'); ?></a></h3>
                 <p class="post-excerpt__info">
                     <span class="post-excerpt__date">
-                        <time itemprop="startDate" datetime="<?php mf_the_datetime(get_field('event_date')) ?>"><?php the_field('event_date'); ?></time>
+                        <time itemprop="startDate" datetime="<?= mf_get_datetime(get_field('event_date')); ?><?php if(get_field('event_time') !== ''): echo 'T'; the_field('event_time'); endif; ?>"><?php the_field('event_date'); ?><?php if(get_field('event_time')): ?><?= __(' à ','mf'); ?><?php the_field('event_time'); ?><?php endif; ?></time>
                     </span>
                     <span itemprop="location" itemscope itemtype="http://schema.org/Place" class="post-excerpt__location">
                         <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
