@@ -36,19 +36,23 @@
 
             $loop = new WP_Query( $args );
             if ( $loop->have_posts() ) : while ( $loop->have_posts() ) : $loop->the_post(); ?>
-                <article role="article" class="post-excerpt">
+                <article itemscope itemtype="http://schema.org/Event" role="article" class="post-excerpt">
                     <header class="post-excerpt__header">
-                        <h4 aria-level=4 class="post-excerpt__title"><a class="post-excerpt__link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+                        <h4 itemprop="name" aria-level=4 class="post-excerpt__title"><a class="post-excerpt__link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
                         <p class="post-excerpt__info">
-                    <span class="post-excerpt__date">
-                        <time datetime="<?php mf_the_datetime(get_field('event_date')) ?>"><?php the_field('event_date'); ?></time>
-                    </span>
-                            <span class="post-excerpt__location"><?php the_field('event_location'); ?></span>
+                        <span class="post-excerpt__date">
+                            <time itemprop="startDate" datetime="<?php mf_the_datetime(get_field('event_date')) ?>"><?php the_field('event_date'); ?></time>
+                        </span>
+                        <span itemprop="location" itemscope itemtype="http://schema.org/Place" class="post-excerpt__location">
+                            <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                                <span itemprop="streetAddress"><?php the_field('event_location'); ?></span>
+                            </span>
+                        </span>
                         </p>
                     </header>
                     <div class="post-excerpt__content">
                         <?php mf_the_image(get_field('event_thumbnail'), "mf_thumbnail", "post-excerpt__thumbnail"); ?>
-                        <p class="post-excerpt__description"><?php the_field('event_excerpt'); ?></p>
+                        <p itemprop="description" class="post-excerpt__description"><?php the_field('event_excerpt'); ?></p>
                     </div>
                     <a class="cta cta_dark cta_no-border cta_force-right" href="<?php the_permalink(); ?>"><?= __('En savoir plus','mf');?><span class="u-hidden-visually" aria-hidden="true"><?= __(" sur l'événement ",'mf');?><?php the_title(); ?></span></a>
                 </article>
