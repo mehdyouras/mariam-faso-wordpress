@@ -42,7 +42,7 @@
                     $loop = new WP_Query( $args );
                     while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
-                        <li><a class="footer-project__link" href="<?php the_permalink(); ?>"><?php the_field('project_name') ?></a></li>
+                        <li><a class="footer-project__link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
                     <?php endwhile; ?>
                 </ol>
                 <a href="<?php mf_the_permalink_by_title("participer") ?>" class="cta"><?= __('Participer','mf');?></a>
