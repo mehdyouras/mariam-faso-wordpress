@@ -23,7 +23,7 @@
     list-style: none;
     margin: 0 $inuit-global-spacing-unit;
     padding-bottom: $inuit-global-spacing-unit-tiny;
-    margin-bottom: $inuit-global-spacing-unit;
+    margin-bottom: 2*$inuit-global-spacing-unit;
     border-bottom: 2px solid $mf-orange;
     max-width: 18em;
   }
