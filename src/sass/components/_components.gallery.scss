@@ -8,6 +8,9 @@
   &__title {
     position: absolute;
   }
+  &__thumbnail {
+    height: inuit-rem(270px);
+  }
 }
 
 .images-list {
@@ -19,6 +22,9 @@
   &__item {
     list-style: none;
     margin: 0 $inuit-global-spacing-unit;
+    padding-bottom: $inuit-global-spacing-unit-tiny;
+    margin-bottom: $inuit-global-spacing-unit;
+    border-bottom: 2px solid $mf-orange;
     max-width: 18em;
   }
   &__image {

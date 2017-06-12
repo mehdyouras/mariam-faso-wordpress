@@ -16,9 +16,11 @@ get_header();
             <?php if (have_posts()) : ?>
             <?php while (have_posts()) : the_post(); ?>
             <h2 aria-level=2 class="section-header__title"><?php the_title(); ?></h2>
+            <?php if(get_field('gallery_location')) : ?>
             <p class="post-excerpt__info section-header__intro">
                 <span class="post-excerpt__location"><?php the_field('gallery_location'); ?></span>
             </p>
+            <?php endif; ?>
         </div>
     </header>
     <div class="post content-wrapper">
@@ -27,9 +29,7 @@ get_header();
                 <?php foreach($images as $image) :?>
                     <li class="images-list__item">
                         <a href="<?= $image['url']; ?>" data-lightbox="gallery" data-title="<?= $image['caption']; ?>">
-                            <figure>
-                                <?php mf_the_image($image, 'medium', 'images-list__image', true) ?>
-                            </figure>
+                            <?php mf_the_image($image, 'medium', 'images-list__image', false, false) ?>
                         </a>
                     </li>
                 <?php endforeach; ?>
