@@ -52,12 +52,15 @@
     color: #484848;
     font-size: 0.9em;
     font-style: italic;
-    padding-top: $inuit-global-spacing-unit-small;
+    //padding-top: $inuit-global-spacing-unit-small;
   }
 }
 
 .image_full-width {
   margin: 2*$inuit-global-font-size 0;
+  &__image {
+    margin-bottom: $inuit-global-spacing-unit-small;
+  }
 }
 
 .yt-frame {

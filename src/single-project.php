@@ -26,7 +26,7 @@ get_header();
                 <span class="post-excerpt__location"><?php the_field('project_location'); ?></span>
             </p>
             <?php if(get_field('project_gallery')) : ?>
-                <a class="cta cta_dark cta_no-border" href="<?php the_field('project_gallery'); ?>"><?= __("Découvrir nos photos du projet", "mf")?></a>
+                <a class="cta cta_dark cta_no-border" href="<?php the_field('project_gallery'); ?>"><?= __("Découvrir les photos du projet", "mf")?></a>
             <?php endif; ?>
             <meta itemprop="author" content="Mariam Faso">
         </div>
