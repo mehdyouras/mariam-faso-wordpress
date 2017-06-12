@@ -29,19 +29,23 @@
     );
     $loop = new WP_Query( $args );
     while ( $loop->have_posts() ) : $loop->the_post(); ?>
-    <article role="article" class="post-excerpt">
+    <article itemscope itemtype="http://schema.org/Event" role="article" class="post-excerpt">
         <div class="post-excerpt__content-wrapper">
             <header class="post-excerpt__header">
-                <h3 aria-level=3 class="post-excerpt__title"><?php the_title(); ?></h3>
+                <h3 itemprop="name" aria-level=3 class="post-excerpt__title"><?php the_title(); ?></h3>
                 <p class="post-excerpt__info">
                     <span class="post-excerpt__date">
-                        <?= __('Du','mf');?> <time datetime="<?php mf_the_datetime(get_field('action_startdate')); ?>" class="actions__time"><?php the_field('action_startdate') ?></time> <?= __('au','mf');?> <time datetime="<?php mf_the_datetime(get_field('action_enddate')); ?>" class="actions__time"><?php the_field('action_enddate') ?></time>.
+                        <?= __('Du','mf');?> <time itemprop="startDate" datetime="<?php mf_the_datetime(get_field('action_startdate')); ?>" class="actions__time"><?php the_field('action_startdate') ?></time> <?= __('au','mf');?> <time itemprop="endDate" datetime="<?php mf_the_datetime(get_field('action_enddate')); ?>" class="actions__time"><?php the_field('action_enddate') ?></time>.
                     </span>
-                    <span class="post-excerpt__location"><?php the_field('action_location') ?></span>
+                    <span itemprop="location" itemscope itemtype="http://schema.org/Place" class="post-excerpt__location">
+                        <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                            <span itemprop="streetAddress"><?php the_field('action_location'); ?></span>
+                    </span>
+                </span>
                     <a href="<?php the_field('action_fb'); ?>"><span class="post-excerpt__fb"><?= __("Vers l'événement facebook",'mf');?></span></a>
                 </p>
             </header>
-            <div class="post-excerpt__content">
+            <div itemprop="description" class="post-excerpt__content">
                 <?php the_field('action_description') ?>
             </div>
         </div>

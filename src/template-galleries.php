@@ -33,7 +33,7 @@ get_header();
         while ( $loop->have_posts() ) : $loop->the_post(); ?>
             <a class="gallery" href="<?php the_permalink(); ?>">
                 <p class="gallery__title cta cta_over-image"><?php the_title(); ?></p>
-                <?php mf_the_image(get_field('gallery_thumbnail'), 'mf_thumbnail', 'gallery__thumbnail'); ?>
+                <?php mf_the_image(get_field('gallery_thumbnail'), 'mf_thumbnail', 'gallery__thumbnail', false, false); ?>
             </a>
         <?php endwhile; ?>
     </section>

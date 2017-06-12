@@ -16,7 +16,7 @@
 
 <?php elseif( get_row_layout() == 'flexible_video' ): ?>
     <div class="image_full-width">
-        <div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/<?php mf_the_video(get_sub_field('video_url')); ?>?ecver=2" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
+        <div style="position:relative;height:0;padding-bottom:56.25%"><iframe class="yt-frame" src="https://www.youtube.com/embed/<?php mf_the_video(get_sub_field('video_url')); ?>?ecver=2" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
     </div>
 
 <?php elseif( get_row_layout() == 'flexible_text-image' ):?>

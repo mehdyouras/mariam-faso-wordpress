@@ -2,7 +2,7 @@
 get_header();
 ?>
 
-<section class="wrapper">
+<section itemscope itemtype="http://schema.org/Article" class="wrapper">
     <header class="section-header section-header_projects">
         <div class="section-header__content-container">
             <div class="section-header__breadcrumb">
@@ -15,11 +15,11 @@ get_header();
             </div>
             <?php if (have_posts()) : ?>
             <?php while (have_posts()) : the_post(); ?>
-            <h2 aria-level=2 class="section-header__title"><?php the_title(); ?></h2>
+            <h2 itemprop="headline" aria-level=2 class="section-header__title"><?php the_title(); ?></h2>
             <?php if(get_field('project_startdate')) :?>
             <p class="post-excerpt__info section-header__intro">
                 <span class="post-excerpt__date">
-                    <time <?= mf_get_datetime(get_field('project_startdate')); ?>><?php the_field('project_startdate'); ?></time>
+                    <time itemprop="datePublished" datetime="<?= mf_get_datetime(get_field('project_startdate')); ?>"><?php the_field('project_startdate'); ?></time>
                     <?php if(get_field('project_enddate')) :?>au <time datetime="<?= mf_get_datetime(get_field('project_enddate')); ?>"><?php the_field('project_enddate'); ?></time><?php endif; ?>
                 </span>
             <?php endif; ?>
@@ -28,9 +28,10 @@ get_header();
             <?php if(get_field('project_gallery')) : ?>
                 <a class="cta cta_dark cta_no-border" href="<?php the_field('project_gallery'); ?>"><?= __("Découvrir nos photos du projet", "mf")?></a>
             <?php endif; ?>
+            <meta itemprop="author" content="Mariam Faso">
         </div>
     </header>
-    <section class="post content-wrapper">
+    <section itemprop="articleBody" class="post content-wrapper">
         <?php
         if( have_rows('flexible') ): ?>
             <?php while ( have_rows('flexible') ) : the_row(); ?>

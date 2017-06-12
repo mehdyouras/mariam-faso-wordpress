@@ -342,7 +342,7 @@ function mf_the_permalink_by_title($title) {
 
 // Insert image
 
-function mf_the_image($image, $sizeWanted, $class = '', $needCaption = false) {
+function mf_the_image($image, $sizeWanted, $class = '', $needCaption = false, $needItemprop = true) {
 
     if( !empty($image) ) {
     // vars
@@ -362,7 +362,11 @@ function mf_the_image($image, $sizeWanted, $class = '', $needCaption = false) {
         $captionTag = '<figcaption class="figure__caption">'.$caption.'</figcaption>';
     }
 
-    $imageTag = '<img class="' .$class. '" src="'.$thumb. '" alt="'.$alt.'" />'.$captionTag;
+    if($needItemprop) {
+        $itempropTag = 'itemprop="image"';
+    }
+
+    $imageTag = '<img '. $itempropTag .'class="' .$class. '" src="'.$thumb. '" alt="'.$alt.'" />'.$captionTag;
     echo $imageTag;
 }
 
