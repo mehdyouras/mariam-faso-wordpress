@@ -366,7 +366,7 @@ function mf_the_image($image, $sizeWanted, $class = '', $needCaption = false, $n
         $itempropTag = 'itemprop="image"';
     }
 
-    $imageTag = '<img '. $itempropTag .'class="' .$class. '" src="'.$thumb. '" alt="'.$alt.'" />'.$captionTag;
+    $imageTag = '<img '. $itempropTag .' class="' .$class. '" src="'.$thumb. '" alt="'.$alt.'" />'.$captionTag;
     echo $imageTag;
 }
 
