@@ -42,7 +42,9 @@
                             <span itemprop="streetAddress"><?php the_field('action_location'); ?></span>
                     </span>
                 </span>
-                    <a href="<?php the_field('action_fb'); ?>"><span class="post-excerpt__fb"><?= __("Vers l'événement facebook",'mf');?></span></a>
+                    <?php if(get_field('action_fb')) : ?>
+                        <a href="<?php the_field('action_fb'); ?>"><span class="post-excerpt__fb"><?= __("Vers l'événement facebook",'mf');?></span></a>
+                    <?php endif; ?>
                 </p>
             </header>
             <div itemprop="description" class="post-excerpt__content">
