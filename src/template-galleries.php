@@ -17,7 +17,7 @@ get_header();
                 ?>
             </div>
             <h2 aria-level=2 class="section-header__title"><?php the_title(); ?></h2>
-            <p class="section-header__intro"><?php the_field("gallery_intro") ?></p>
+            <p class="section-header__intro"><?php the_field("gallery_intro"); ?></p>
             <a class="cta cta_dark cta_no-border" href="<?php mf_the_permalink_by_title("projets") ?>">Nos projets</a>
             <a class="cta cta_dark cta_no-border" href="<?php mf_the_permalink_by_title("participer") ?>">Participer</a>
             <a class="cta cta_dark cta_no-border" href="<?php mf_the_permalink_by_title("nous contacter") ?>">Nous contacter</a>
