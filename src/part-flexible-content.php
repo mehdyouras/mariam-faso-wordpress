@@ -1,5 +1,5 @@
 <?php if( get_row_layout() == 'flexible_text' ): ?>
-    <div class="wysiwyg-block wysiwyg-block">
+    <div class="wysiwyg-block">
         <div class="wysiwyg wysiwyg_margin">
             <?php the_sub_field('flexible_text_wysiwyg'); ?>
         </div>

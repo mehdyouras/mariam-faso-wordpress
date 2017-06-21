@@ -2,7 +2,7 @@
 get_header();
 ?>
 
-<article role="article" class="wrapper">
+<article class="wrapper">
     <header class="section-header section-header_gallery">
         <div class="section-header__content-container">
             <div class="section-header__breadcrumb">
@@ -28,7 +28,7 @@ get_header();
             <?php $i = 0; $images = get_field('gallery'); if( $images ): ?>
                 <?php foreach($images as $image) :?>
                     <li class="images-list__item">
-                        <a href="<?= $image['url']; ?>" data-lightbox="gallery" data-title="<?= $image['caption']; ?>">
+                        <a href="<?= $image['url']; ?>" data-lightbox="gallery">
                             <?php mf_the_image($image, 'medium', 'images-list__image', false, false) ?>
                         </a>
                     </li>

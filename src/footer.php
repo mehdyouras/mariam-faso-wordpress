@@ -1,6 +1,6 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-<footer role="contentinfo" class="footer">
+<footer class="footer">
     <section>
         <h2 aria-level=2 class="u-hidden-visually" aria-hidden="true">Pied de page</h2>
         <div class="footer__container">

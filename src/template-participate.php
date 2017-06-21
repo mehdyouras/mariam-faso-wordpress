@@ -5,7 +5,7 @@
 get_header();
 ?>
 
-<article role="article" class="wrapper">
+<article class="wrapper">
     <header class="section-header section-header_participate">
         <div class="section-header__content-container">
             <div class="section-header__breadcrumb">

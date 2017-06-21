@@ -2,7 +2,7 @@
 get_header();
 ?>
 
-<article itemscope itemtype="http://schema.org/NewsArticle" role="article" class="wrapper">
+<article itemscope itemtype="http://schema.org/NewsArticle" class="wrapper">
     <header class="section-header section-header_post">
         <div class="section-header__content-container">
             <div class="section-header__breadcrumb">

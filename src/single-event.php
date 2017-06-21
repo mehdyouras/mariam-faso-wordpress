@@ -2,7 +2,7 @@
 get_header();
 ?>
 
-<article itemscope itemtype="http://schema.org/Event" role="article" class="wrapper">
+<article itemscope itemtype="http://schema.org/Event" class="wrapper">
     <header class="section-header section-header_events">
         <div class="section-header__content-container">
             <div class="section-header__breadcrumb">

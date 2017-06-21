@@ -360,6 +360,7 @@ function mf_the_image($image, $sizeWanted, $class = '', $needCaption = false, $n
     $captionTag = '';
     if($needCaption) {
         $captionTag = '<figcaption class="figure__caption">'.$caption.'</figcaption>';
+        $alt = "";
     }
 
     if($needItemprop) {

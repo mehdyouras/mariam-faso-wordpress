@@ -31,7 +31,7 @@
             );
         $loop = new WP_Query( $args );
         while ( $loop->have_posts() ) : $loop->the_post(); ?>
-                <article itemscope itemtype="http://schema.org/Article"  role="article" class="post-excerpt">
+                <article itemscope itemtype="http://schema.org/Article" class="post-excerpt">
                     <div class="post-excerpt__content-wrapper">
                         <header class="post-excerpt__header">
                             <h3 itemprop="headline" aria-level=3 class="post-excerpt__title"><a class="post-excerpt__link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>

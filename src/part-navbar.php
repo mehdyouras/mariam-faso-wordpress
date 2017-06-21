@@ -1,4 +1,4 @@
-<nav role="navigation" class="site-nav">
+<nav class="site-nav">
     <h2 aria-level=2 aria-hidden="true">Navigation principale</h2>
     <a class="site-nav__close-btn" href="#">&times;</a>
     <ul class="o-list-bare site-nav__list">
@@ -6,8 +6,8 @@
         <?php foreach(mf_get_nav_items('header') as $item):
             $is_active = mf_is_active($item->link, $current_url);
         ?>
-        <li class="site-nav__item <?php if($item->children) : ?>site-nav__item_dropdown<?php endif; ?> <?php if($is_active) : ?>active<?php endif; ?>">
-            <a class="site-nav__link <?php if($item->children) : ?>site-nav__link_dropdown<?php endif; ?>" href="<?= $item->link ?>"><?= $item->label ?></a>
+        <li class="site-nav__item<?php if($item->children) : ?> site-nav__item_dropdown<?php endif; ?><?php if($is_active) : ?> active<?php endif; ?>">
+            <a class="site-nav__link<?php if($item->children) : ?> site-nav__link_dropdown<?php endif; ?>" href="<?= $item->link ?>"><?= $item->label ?></a>
             <?php if($item->children): ?>
                 <ul class="o-list-bare site-nav__dropdown">
                     <?php foreach($item->children as $sub): ?>

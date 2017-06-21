@@ -12,7 +12,7 @@
     <![endif]-->
 </head>
 <body>
-<header role="banner" class="header <?php if(!is_front_page()) :?>header_small<?php endif; ?>">
+<header class="header<?php if(!is_front_page()) :?> header_small<?php endif; ?>">
     <div class="site-header">
         <h1 aria-level=1 class="site-title">
             <a class="site-title__link" href="<?= get_site_url(); ?>">

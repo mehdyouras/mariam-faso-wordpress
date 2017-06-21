@@ -1,4 +1,4 @@
-<article itemscope itemtype="http://schema.org/NewsArticle" role="article" class="post-excerpt <?php if(is_front_page()) :?>post-excerpt_home<?php endif; ?>">
+<article itemscope itemtype="http://schema.org/NewsArticle" class="post-excerpt<?php if(is_front_page()) :?> post-excerpt_home<?php endif; ?>">
     <div class="post-excerpt__content-wrapper">
         <header class="post-excerpt__header">
             <?php if(is_front_page()): ?>
