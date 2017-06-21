@@ -27,12 +27,13 @@ const removeFocusDropdownMenu = function(oEvent) {
 }
 
 const navbarScroll = function() {
-    let $body = document.body,
+    let $html = document.querySelector('html'),
+        $body = document.body,
         $navbar = document.querySelector(".site-header");
-    if($body.scrollTop >= 28) {
+    if(window.pageYOffset >= 28 ) {
         $navbar.classList.add("site-header_fixed");
     }
-    if($body.scrollTop < 28) {
+    if(window.pageYOffset < 28) {
         $navbar.classList.remove("site-header_fixed");
     }
 }
