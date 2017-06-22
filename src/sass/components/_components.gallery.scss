@@ -1,12 +1,13 @@
 .gallery {
-  display: flex;
   position: relative;
   margin: $inuit-global-spacing-unit;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
   &__title {
     position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
   }
   &__thumbnail {
     height: inuit-rem(270px);
